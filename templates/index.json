@@ -439,8 +439,8 @@
         "collection_NLnnMB": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "collection_heading": "",
+            "collection": "yoga-mats",
+            "collection_heading": "Yoga Essentials",
             "collection_bg_color": "#1b1b1b"
           }
         },
@@ -448,7 +448,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "collection_heading": "",
+            "collection_heading": "Resistance Bands",
             "collection_bg_color": "#393939"
           }
         },
@@ -456,7 +456,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "collection_heading": "",
+            "collection_heading": "Fitness Trackers",
             "collection_bg_color": "#1b1b1b"
           }
         }
