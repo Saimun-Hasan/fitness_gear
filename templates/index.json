@@ -881,7 +881,7 @@
         "min_height_mobile": 200,
         "scrolling_speed": 15,
         "scrolling_speed_mobile": 15,
-        "bgcolor": "",
+        "bgcolor": "#000000",
         "background_effect": false,
         "effect_color": "radial-gradient(circle, rgba(255, 205, 193, 1) 0%, rgb(254 224 224 \/ 0%) 100%)",
         "top_space_desktop": 30,
