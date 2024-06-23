@@ -283,10 +283,10 @@
         "template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-0": {
           "type": "heading",
           "settings": {
-            "heading": "Rich text here",
+            "heading": "Elevate Your Fitness Routine. Discover Premium Gear Today",
             "seo_heading_tag": "h2",
             "higlight_style": "basic",
-            "size": "h2",
+            "size": "h1",
             "style": "none",
             "outline_thickness": "1px",
             "heading_space_desktop": 20,
@@ -296,26 +296,18 @@
             "marker_color": "#000000",
             "marker_text_color": "#000000"
           }
-        },
-        "template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Use this description about your brand with your customers.<\/p>"
-          }
         }
       },
       "block_order": [
-        "template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-0",
-        "template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-1"
+        "template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-0"
       ],
-      "disabled": true,
       "settings": {
         "section_visibility": "always",
         "content_width": "large",
         "text_alignment": "center",
-        "color_scheme": "secondary",
+        "color_scheme": "primary",
         "enable_gradiant": false,
-        "enable_fixed": false,
+        "enable_fixed": true,
         "top_space_desktop": 70,
         "bottom_space_desktop": 70,
         "top_space_mobile": 40,
