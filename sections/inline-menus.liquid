@@ -1,0 +1,785 @@
+
+{% liquid
+  assign firstAvailable = true
+  assign rtlEnable = false
+  if settings.content_direction
+    if settings.languanges_code != blank
+      if settings.languanges_code contains localization.language.iso_code
+        assign rtlEnable = true
+      endif
+    else
+      assign rtlEnable = true
+    endif
+  endif
+%}
+{% if rtlEnable %}
+  <link rel="preload" as="style" href="{{ 'inline-menus-rtl.css' | asset_url }}">
+  {{ 'inline-menus-rtl.css' | asset_url | stylesheet_tag }}
+{% else  %}
+  <link rel="preload" as="style" href="{{ 'inline-menus.css' | asset_url }}">
+  {{ 'inline-menus.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+{% capture productSkeletonImages %}
+  <div class="inline-menus-product-list-item">
+    <div class="image-wrapper" style="--img-ratio:100%">
+      {%- capture current -%}{% cycle section.id: 1, 2, 3, 4 %}{%- endcapture -%}
+        {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+    </div>
+  </div>
+{% endcapture %}
+<div class="section-wrapper {{ section.settings.color_scheme }}-color-scheme {% if section.settings.enable_gradiant %} gradient{% endif %}">
+  {% if section.settings.background_image != blank and section.settings.desktop_image_style == 'scattered' %}
+    <div class="inline-menu-section-background">
+    {%- render 'lazy-image', image: section.settings.background_image -%}
+    </div>
+  {% endif %}
+  <div class="{% if section.settings.desktop_image_style =='horizontal' %}container{% else %}container-fluid{% endif %}">
+    {% if section.settings.heading != blank %}
+      {%- capture higlightPrefix -%}
+       <span class="marker">
+      {%- endcapture -%}
+      {%- capture highlightSuffix -%}
+          {%- render 'marker-text-style' marker_style: section.settings.higlight_style -%}
+      {%- endcapture -%}
+      <div class="section-heading-box text-{{ section.settings.text_alignment }}">
+          <{{ section.settings.seo_heading_tag }} class="section-heading-title rte{% if section.settings.enable_highlight %} highlight-text{% endif %} {{ section.settings.heading_size }}"
+            style="--outline-thickness:{{ section.settings.outline_thickness }};--marker-svg:{{ section.settings.marker_color }};--marker:{{ section.settings.marker_text_color }}">
+            {{ section.settings.heading | replace: "[[", higlightPrefix | replace: "]]", highlightSuffix }}
+          </{{ section.settings.seo_heading_tag }}>
+      </div>
+    {% endif %}
+    {% if section.blocks.size > 0 %}
+      <div class="inline-menus-list {% if section.settings.desktop_image_style != 'horizontal' %}menu-vertically{% else %}menu-horizontal{% endif %}">
+        {% for block in section.blocks %}
+          {% assign modulo_value = forloop.index |  modulo: 2 %}
+          {% case block.type %}
+            {% when 'collection' %}
+              {% if block.settings.heading != blank or block.settings.collection != blank %}
+                {% assign menucollection =  block.settings.collection %}
+                <div class="inline-menus-list-item {% if section.settings.desktop_image_style != 'horizontal' %} scattered-item{% if modulo_value == 0 %} even-count{% else %} odd-count{%endif%}{%endif%} {% if section.blocks.size > 1 %}{% if forloop.first %} pos-top{% elsif forloop.last%} pos-bottom{% else %} pos-center{% endif %}{% endif %}{% if section.settings.enable_first_active and firstAvailable %} active{% endif %}" data-inlinemenu-wrapper {{ block.shopify_attributes }} {% if section.settings.desktop_image_style =='horizontal' %}data-horizontal-menu{% endif %}>
+                  <div class="inline-menu__content">
+                    {% if  block.settings.heading != blank %}
+                      {% assign collectionTitle =   block.settings.heading %}
+                      {% else %}
+                      {% assign collectionTitle = menucollection.title %}
+                    {% endif %}
+                    {% if collectionTitle %}
+                      <a href="{{ menucollection.url }}" class="inline-menus-heading heading-font {{ section.settings.block_heading_size }}">
+                        {% assign collectionTitleValue = collectionTitle %}
+                        {% assign collectionTitleSize = collectionTitleValue | size %}
+                        {% assign space = "&nbsp;" %}
+                        <span class="original-text" text-split-text>
+                            {% for i in (0..collectionTitleSize) %}
+                              {% assign title = collectionTitleValue | slice: i %}
+                              {% if title == blank %}
+                                {% if collectionTitleSize != i %}
+                                  <span>{{ space }}</span>
+                                {% endif %}
+                              {% else %}
+                                  <span class="character">{{ collectionTitleValue | slice: i }}</span>
+                              {% endif %}
+                            {% endfor %} 
+                        </span>
+                        <span class="shadow-text" text-split-text>
+                          {% for i in (0..collectionTitleSize) %}
+                            {% assign title = collectionTitleValue | slice: i %}
+                            {% if title == blank %}
+                              {% if collectionTitleSize != i %}
+                                <span>{{ space }}</span>
+                              {% endif %}
+                            {% else %}
+                                <span class="character">{{ collectionTitleValue | slice: i }}</span>
+                            {% endif %}
+                        {% endfor %} 
+    
+                        </span>
+                    
+                      </a>
+                    {% endif %}
+                    <div class="inline-menu__arrow" data-inlinemenu-toggle>    
+                      <svg height="30" viewBox="0 0 1792 1792" width="30"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>
+                    </div>
+                  </div>
+                  <div class="inline-menus-product-list" data-inlinemenu-content>
+                    {% if menucollection != blank %}
+                      {% for collectionProduct in menucollection.products  limit: 5 %}
+                        <a href="{{ collectionProduct.url }}" class="inline-menus-product-list-item">
+                          <div class="image-wrapper" style="--img-ratio:100%">
+                            {%- if collectionProduct.featured_media != blank -%}
+                              {%- render 'lazy-image', image: collectionProduct.featured_media.preview_image -%}
+                            {% else %}
+                              {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                            {% endif %}
+                          </div>
+                        </a>
+                      {% endfor %}
+                    {% else %}
+                    {% for i in(1..4) %}
+                      {{ productSkeletonImages }}
+                    {% endfor %}
+                   {% endif %}
+                  </div>
+                </div>
+                {% assign firstAvailable = false %}
+              {% endif  %}
+            {% when 'product_list' %}
+              {% if block.settings.heading != blank %}
+              {% assign productList =  block.settings.product_list %}
+                <div class="inline-menus-list-item{% if section.settings.desktop_image_style != 'horizontal' %} scattered-item{% if modulo_value == 0 %} even-count{% else %} odd-count{%endif%} {%endif%} {% if section.blocks.size > 1 %}{% if forloop.first %} pos-top{% elsif forloop.last%} pos-bottom{% else %} pos-center{% endif %}{% endif %}{% if section.settings.enable_first_active and firstAvailable %} active{% endif %}" data-inlinemenu-wrapper {{ block.shopify_attributes }}> 
+                  <div class="inline-menu__content">
+                  {% if  block.settings.heading != blank %}
+                     <{% if block.settings.url != blank %}a href="{{ block.settings.url }}"{% else %}span{% endif %} class="inline-menus-heading heading-font {{ section.settings.block_heading_size }}">
+                    
+                      {% assign collectionTitleValue =  block.settings.heading  %}
+                        {% assign collectionTitleSize = collectionTitleValue | size %}
+                        {% assign space = "&nbsp;" %}
+                        <span class="original-text" text-split-text>
+                            {% for i in (0..collectionTitleSize) %}
+                              {% assign title = collectionTitleValue | slice: i %}
+                              {% if title == blank %}
+                                {% if collectionTitleSize != i %}
+                                  <span>{{ space }}</span>
+                                {% endif %}
+                                    {% else %}
+                                  <span class="character">{{ collectionTitleValue | slice: i }}</span>
+                              {% endif %}
+                            {% endfor %} 
+                        </span>
+                        <span class="shadow-text" text-split-text>
+                          {% for i in (0..collectionTitleSize) %}
+                            {% assign title = collectionTitleValue | slice: i %}
+                            {% if title == blank %}
+                              {% if collectionTitleSize != i %}
+                                <span>{{ space }}</span>
+                              {% endif %}
+                                  {% else %}
+                                <span class="character">{{ collectionTitleValue | slice: i }}</span>
+                            {% endif %}
+                        {% endfor %} 
+    
+                        </span>
+                      {% comment %} {{ block.settings.heading }} {% endcomment %}
+                    </{% if block.settings.url != blank %}a{% else %}span{% endif %}>
+                  {% endif %}
+                  <div class="inline-menu__arrow" data-inlinemenu-toggle>
+                    <svg height="30" viewBox="0 0 1792 1792" width="30"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></div>
+                  </div>
+                  <div class="inline-menus-product-list" data-inlinemenu-content>
+                    {% if productList != blank %}
+                      {% for listProduct in productList %}
+                        <a href="{{ listProduct.url }}" class="inline-menus-product-list-item">
+                          <div class="image-wrapper" style="--img-ratio:100%">
+                            {%- if listProduct.featured_media != blank -%}
+                              {%- render 'lazy-image', image: listProduct.featured_media.preview_image -%}
+                            {% else %}
+                              {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                            {% endif %}
+                          </div>
+                        </a>
+                      {% endfor %}
+                    {% else  %}
+                      {% for i in(1..4) %}
+                        {{ productSkeletonImages }}
+                      {% endfor %}
+                    {% endif %}
+                  </div>                
+                </div>
+                {% assign firstAvailable = false %}
+              {% endif %}
+            {% when 'image_text' %}
+  
+              {% if block.settings.heading != blank %}
+                <div class="inline-menus-list-item {% if section.settings.desktop_image_style != 'horizontal'  %} scattered-item{% if modulo_value == 0  %} even-count{% else %} odd-count{%endif%}{%endif%} image-block{% if section.blocks.size > 1 %} {% if forloop.first %} pos-top{% elsif forloop.last %} pos-bottom{% else %} pos-center{% endif %}{% endif %}{% if section.settings.enable_first_active and firstAvailable %} active{% endif %}" data-inlinemenu-wrapper {{ block.shopify_attributes }}>
+        
+                {% if  block.settings.heading != blank %}
+                  <div class="inline-menu__content">
+                  <{% if block.settings.url != blank %}a href="{{ block.settings.url }}" aria-label="{{ block.settings.heading }}"{%else %}div{% endif %} class="inline-menus-heading heading-font {{ section.settings.block_heading_size }}">
+              
+                    {% assign collectionTitleValue =  block.settings.heading  %}
+                    {% assign collectionTitleSize = collectionTitleValue | size %}
+                    {% assign space = "&nbsp;" %}
+                    <span class="original-text" text-split-text>
+                        {% for i in (0..collectionTitleSize) %}
+                            {% assign title = collectionTitleValue | slice: i %}
+                            {% if title == blank %}
+                              {% if collectionTitleSize != i %}
+                                <span>{{ space }}</span>
+                              {% endif %}
+                                  {% else %}
+                                <span class="character">{{ collectionTitleValue | slice: i }}</span>
+                            {% endif %}
+                        {% endfor %} 
+                    </span>
+                    <span class="shadow-text" text-split-text>
+                      {% for i in (0..collectionTitleSize) %}
+                        {% assign title = collectionTitleValue | slice: i %}
+                        {% if title == blank %}
+                          {% if collectionTitleSize != i %}
+                            <span>{{ space }}</span>
+                          {% endif %}
+                              {% else %}
+                            <span class="character">{{ collectionTitleValue | slice: i }}</span>
+                        {% endif %}
+                    {% endfor %} 
+
+                    </span>
+                  </{% if block.settings.url != blank %}a{%else %}div{% endif %}>
+                  <div class="inline-menu__arrow" data-inlinemenu-toggle>
+                    <svg height="30" viewBox="0 0 1792 1792" width="30"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></div>
+                  </div>
+                {% endif %}  
+                <div class="inline-menus-col-img" data-inlinemenu-content>
+                  <{% if block.settings.url != blank %}a href="{{ block.settings.url }}"  class="inline-menus-col-link" aria-label="inline image"{%else %}div{% endif %}>
+                    <div class="image-wrapper" style="--img-ratio:100%">
+                      {% if  block.settings.image != blank %}
+                        {%- render 'lazy-image', image: block.settings.image -%}
+                      {% else %}
+                      {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                      {% endif %}
+                    </div>
+                  </{% if block.settings.url != blank %}a{%else %}div{% endif %}>
+                  </div>
+                </div>
+                {% assign firstAvailable = false %}
+             {% endif %}
+          {% endcase %}
+        {% endfor %}
+      </div>
+    {% endif  %}
+  </div>
+</div>
+<style>
+    #shopify-section-{{ section.id }} .section-wrapper {
+      --inner-space-top:{{ section.settings.top_space_desktop }}px;
+      --inner-space-bottom:{{ section.settings.bottom_space_desktop }}px;
+    }
+  {% if section.settings.background_image != blank and section.settings.desktop_image_style == 'scattered'  %}
+    #shopify-section-{{ section.id }} .section-wrapper {
+      position:relative;
+    }
+    #shopify-section-{{ section.id }} .inline-menu-section-background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      {% if section.settings.enable_blur_overlay %}
+      filter: blur({{ section.settings.blur_opacity }}px);
+      {% endif %}
+    }
+    #shopify-section-{{ section.id }} .inline-menu-section-background:before {
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background:rgba({{ section.settings.overlay_color.red }},{{ section.settings.overlay_color.green }},{{ section.settings.overlay_color.blue }},{{ section.settings.overlay_opacity | divided_by:100.0 }});
+      z-index:1;
+    }
+  {% endif %}
+    #shopify-section-{{ section.id }} .section-heading-title{
+      padding-bottom:{{ section.settings.heading_space_desktop }}px;
+    }
+    @media screen and (max-width:767px){
+      #shopify-section-{{ section.id }} .section-wrapper {
+        --inner-space-top:{{ section.settings.top_space_mobile }}px;
+        --inner-space-bottom:{{ section.settings.bottom_space_mobile }}px;
+      }
+      #shopify-section-{{ section.id }} .section-heading-title{
+        padding-bottom:{{ section.settings.heading_space_mobile }}px;
+      }
+    }
+    {% if section.settings.section_visibility == 'large' %}
+      @media (max-width: 767px) {
+        #shopify-section-{{ section.id }}{
+          display: none !important;
+        }
+      }
+    {% elsif section.settings.section_visibility == 'small' %}
+      @media (min-width: 768px) {
+        #shopify-section-{{ section.id }}{
+          display: none !important;
+        }
+      }
+  {% endif %}
+
+  {% assign delayCount = 0.01 %}
+  {% assign delayCounthover = 0.011 %}
+  {% for i in (1..150) %}
+    #shopify-section-{{ section.id }} .inline-menu__content .original-text .character:nth-child({{ i }}){
+      transition-delay: {{ delayCount }}s;
+      -webkit-transition-delay: {{ delayCount }}s;
+    } 
+
+    #shopify-section-{{ section.id }} .inline-menu__content .shadow-text .character:nth-child({{ i }}){
+      transition-delay: {{ delayCounthover }}s;
+      -webkit-transition-delay: {{ delayCounthover }}s;
+    }
+    
+    {% assign delayCount = delayCount | plus: 0.01 %}
+    {% assign delayCounthover = delayCounthover | plus:0.011 %}
+    
+  {% endfor %}
+
+
+</style>
+{% schema %}
+{
+  "name": "t:sections.inline_menus.name",
+  "class": "inline-menuss-section",
+  "max_blocks": 6,
+  "tag": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_visibility",
+      "label": "t:common.section_visibility.label",
+      "default": "always",
+      "options": [
+        {
+          "label": "t:common.section_visibility.options.always.label",
+          "value": "always"
+        },
+        {
+          "label": "t:common.section_visibility.options.small_devices.label",
+          "value": "small"
+        },
+        {
+          "label": "t:common.section_visibility.options.large_devices.label",
+          "value": "large"
+        }
+      ]
+    },
+    {
+      "type":"select",
+      "id":"desktop_image_style",
+      "label":"t:sections.inline_menus.settings.desktop_image_style.label",
+      "default":"horizontal",
+      "options":[
+        {
+          "value":"horizontal",
+          "label":"t:sections.inline_menus.settings.desktop_image_style.horizontal.label"
+        },
+        {
+          "value":"scattered",
+          "label":"t:sections.inline_menus.settings.desktop_image_style.scattered.label"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "t:common.background_image.label",
+      "info":"t:sections.inline_menus.settings.background_image.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_blur_overlay",
+      "label": "t:sections.inline_menus.settings.enable_blur_overlay.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "blur_opacity",
+      "label": "t:sections.inline_menus.settings.blur_opacity.label",
+      "default": 0,
+      "max": 100,
+      "min": 0,
+      "step": 1,
+      "unit": "%"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_first_active",
+      "label": "t:sections.inline_menus.settings.enable_first_active.label",
+      "default": false
+    },
+    {
+      "type":"header",
+      "content":"t:common.header.content.label"
+    },
+    {
+      "label": "t:common.heading.label",
+      "id": "heading",
+      "type": "inline_richtext",
+      "info": "t:common.marker_style.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_highlight",
+      "label": "t:common.highlight_text.label",
+      "info": "t:common.highlight_text.info"
+    },
+    {
+      "type": "select",
+      "id": "higlight_style",
+      "label": "t:common.marker_style.label",
+      "default": "basic",
+      "options": [
+        {
+          "value": "basic",
+          "label": "t:common.marker_style.options.basic.label"
+        },
+        {
+          "value": "curved",
+          "label": "t:common.marker_style.options.curved.label"
+        },
+        {
+          "value": "line",
+          "label": "t:common.marker_style.options.line.label"
+        },
+        {
+          "value": "box",
+          "label": "t:common.marker_style.options.box.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "outline_thickness",
+      "label": "t:common.outline_stroke.label",
+      "default": "1px",
+      "options": [
+        {
+          "value": "1px",
+          "label": "t:common.outline_stroke.options.thin.label"
+        },
+        {
+          "value": "2px",
+          "label": "t:common.outline_stroke.options.thick.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:common.heading_size.label",
+      "default": "h5",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:common.heading_size.options.h1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:common.heading_size.options.h2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:common.heading_size.options.h3.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:common.heading_size.options.h4.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:common.heading_size.options.h5.label"
+        },
+        {
+          "value": "h6",
+          "label": "t:common.heading_size.options.h6.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "seo_heading_tag",
+      "label": "t:common.seo_heading_tag.label",
+      "info": "t:common.seo_heading_tag.info",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "t:common.heading_alignment.label",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:common.heading_alignment.options.left.label"
+        },
+        {
+          "value": "center",
+          "label": "t:common.heading_alignment.options.center.label"
+        },
+        {
+          "value": "right",
+          "label": "t:common.heading_alignment.options.right.label"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "heading_space_desktop",
+      "label": "t:common.header.heading_space_desktop.label",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_space_mobile",
+      "label": "t:common.header.heading_space_mobile.label",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "block_heading_size",
+      "label": "Block heading size",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:common.heading_size.options.h1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:common.heading_size.options.h2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:common.heading_size.options.h3.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:common.heading_size.options.h4.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:common.heading_size.options.h5.label"
+        },
+        {
+          "value": "h6",
+          "label": "t:common.heading_size.options.h6.label"
+        }
+      ]
+    },
+   
+    {
+      "type": "header",
+      "content": "t:common.header.color_section.label"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:common.color_scheme.label",
+      "default": "secondary",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:common.color_scheme.options.primary.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:common.color_scheme.options.secondary.label"
+        },
+        {
+          "value": "tertiary",
+          "label": "t:common.color_scheme.options.tertiary.label"
+        },
+        {
+          "value": "quaternary",
+          "label": "t:common.color_scheme.options.quaternary.label"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_gradiant",
+      "label": "t:common.gradient.label",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "marker_color",
+      "label": "t:common.marker_color.label",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "marker_text_color",
+      "label": "t:common.marker_text_color.label",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "t:sections.inline_menus.settings.overlay_color.label",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "t:sections.inline_menus.settings.overlay_opacity.label",
+      "default": 0,
+      "max": 100,
+      "min": 0,
+      "step": 1,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "t:common.section_spacing.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:common.section_spacing.top_space_desktop.label",
+      "default": 70,
+      "min": 0,
+      "max": 150,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:common.section_spacing.bottom_space_desktop.label",
+      "default": 70,
+      "min": 0,
+      "max": 150,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:common.section_spacing.top_space_mobile.label",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:common.section_spacing.bottom_space_mobile.label",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "t:sections.inline_menus.blocks.collection.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:common.heading.label",
+          "info":"t:sections.inline_menus.blocks.image_text.settings.collection_title.info",
+          "default": "Heading"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.inline_menus.blocks.collection.settings.collection.label"
+        }
+      ]
+    },
+    {
+      "type": "product_list",
+      "name": "t:sections.inline_menus.blocks.product_list.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:common.heading.label",
+          "default": "Heading",
+          "info":"t:sections.inline_menus.blocks.image_text.settings.collection_title.info"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "t:common.link.label"
+        },
+        {
+          "type": "product_list",
+          "id": "product_list",
+          "limit": 5,
+          "label": "t:sections.inline_menus.blocks.product_list.settings.product_list.label"
+        }
+      ]
+    },
+    {
+      "type": "image_text",
+      "name": "t:sections.inline_menus.blocks.image_text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:common.heading.label",
+          "info":"t:sections.inline_menus.blocks.image_text.settings.collection_title.info",
+          "default": "Heading"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "t:common.link.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:common.image.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.inline_menus.presets.name",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "image_text"
+        },
+        {
+          "type": "product_list"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

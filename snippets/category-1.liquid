@@ -1,0 +1,112 @@
+  {% if section.blocks.size >0 %}
+    <div class="bs-categories__wrapper">
+      <div class="bs-categories__content">
+        <div class="bs-categories__content__slider slider" {% if section.blocks.size>1 %} data-theme-slider='
+          {
+            "cellAlign": "center",
+            "wrapAround": {%if section.blocks.size>5 %}true{% else %}false{% endif %},
+            "contain": false,
+            "asNavFor": ".bs-categories__img__list-{{ section.id }}",
+            "resize": true,
+            "pageDots": false,
+            "prevNextButtons": false,
+            "draggable":false,
+            "groupCells": false,
+            "rightToLeft":{%- if rtlEnable -%}true{%- else -%}false{%- endif -%}
+            }
+          '{% endif %}>
+          {% for block in section.blocks %}
+            {%- liquid
+              assign imageContent = ''
+              assign collection = ''
+              assign collection = block.settings.collection
+              if block.settings.image != blank
+                assign imageContent = block.settings.image
+              elsif collection.featured_image
+                assign imageContent = collection.featured_image
+              endif
+              if block.settings.collection_bg_color == 'rgba(0,0,0,0)' or  block.settings.collection_bg_color == ''
+               if section.settings.enable_gradiant 
+                 assign backgroundColor =  'var(--gradiant-bg)'
+                else
+                 assign backgroundColor =  'var(--body-bg)' 
+               endif 
+              else 
+                  assign backgroundColor =  block.settings.collection_bg_color 
+              endif 
+    
+              
+            -%}
+            <div class="bs-categories__content__item" data-color="{{ backgroundColor }}">
+              <h3 class="bs-categories__content__heading  {{ section.settings.block_heading_size }}  heading-font cursor-pointer">
+                {%- if block.settings.collection_heading != blank -%}
+                  {{ block.settings.collection_heading -}}
+                {%- elsif collection != blank -%}
+                  {{- collection.title | strip_html -}}
+                {%- else -%}
+                  {{ 'sections.onboarding_collection.title' | t }}
+                {%- endif %}
+              </h3>
+            </div>  
+          {% endfor %}
+         
+        </div> 
+      </div>
+      <div class="bs-categories__images">
+        <div class="bs-categories__img__list slider bs-categories__img__list-{{ section.id }}"  {% if section.blocks.size>1 %} data-theme-slider='{
+              "cellAlign": "left",
+              "wrapAround": {% if section.blocks.size>2 %}true{% else %}false{% endif %},
+              "draggable":false,
+              "contain": false,
+              "resize": true,
+              "pageDots": false,
+              "fade":true,
+              "prevNextButtons": false,
+              "groupCells": true
+              }'{% endif %}>
+            {% for block in section.blocks %}
+              {%- liquid
+                assign imageContent = ''
+                assign collection = ''
+                assign collection = block.settings.collection
+                if block.settings.image != blank
+                  assign imageContent = block.settings.image
+                elsif collection.featured_image
+                  assign imageContent = collection.featured_image
+                endif
+               assign  gridImageSize = section.settings.grid_image_size
+              if gridImageSize == 'landscape'
+                assign categoryImageRatio = 'var(--img-landscape)'
+              elsif gridImageSize == 'square'
+                assign categoryImageRatio = 'var(--img-square)'
+              elsif gridImageSize == 'portrait'
+                assign categoryImageRatio = 'var(--img-portrait)'
+              else
+                if imageContent != blank
+                  assign categoryImageRatio = 1 | divided_by: imageContent.aspect_ratio | times: 100 | append: '%'
+                else
+                  assign categoryImageRatio = 100 | append: '%'
+                endif
+              endif
+              -%}
+              <div class="bs-categories__img__item">
+                <div class="bs-categories__image">
+                <div class="image-wrapper" style="--img-ratio:{{ categoryImageRatio }}">
+                  {%- if imageContent != blank -%}
+                    {%- render 'lazy-image', image: imageContent -%}
+                  {%- else -%}
+                    {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+              </div>
+                {% if collection.url != blank  %}
+                  <div class="bs-categories__img__link text-center">
+                  <a href= "{{ collection.url }}" aria-label="{{ collection.title }}">Explore</a>
+                  </div>
+                {% endif %}
+              </div>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endif %}

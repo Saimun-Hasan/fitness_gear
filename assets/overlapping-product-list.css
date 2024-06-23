@@ -1,0 +1,194 @@
+.overlapping-pl__item {
+    position: relative;
+}
+
+.overlapping-pl__content_wrapper {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 100%;
+}
+
+.overlapping-pl__content {
+    display: grid;
+}
+
+.overlapping-pl__image,
+.overlapping-pl__name {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.overlapping-pl__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.overlapping-pl__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+.overlapping-pl__image:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: var(--overlay-background);
+    opacity: var(--overlay-opacity);
+}
+
+.overlapping-pl__name {
+    position: relative;
+    padding: 2rem 2rem;
+    display: flex;
+    align-items: var(--text-position);
+    max-width: 800px;
+}
+
+.overlapping-pl__products {
+    width: 100%;
+    max-width: 15rem;
+    position: relative;
+    margin-left: auto;
+}
+
+.overlapping-pl__products-list {
+    padding: 20px;
+}
+
+.overlapping-pl__products-list .product-card-info {
+    background: var(--body-bg);
+    padding: 5px 20px 10px 20px;
+}
+
+.overlapping-pl__heading {
+    padding-bottom: 10px;
+}
+
+.overlapping-pl__desc {
+    padding-bottom: 20px;
+}
+
+.overlapping-pl__products-list .product-card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.overlapping-pl__products-list .product-card .product-card-img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.overlapping-pl__products-list .box-shadow-true .product-card-img {
+    box-shadow: none;
+    margin: 0;
+}
+
+.overlapping-pl__products-list .product-card.box-shadow-true {
+    box-shadow: 6px 6px 0 var(--product-border);
+}
+
+.overlapping-pl__products-list .product-card {
+    padding: 0;
+}
+
+.overlapping-products-list-section+.rich-text-section {
+    position: unset !important;
+}
+
+@media (min-width:1025px) {
+    .overlapping-pl__content {
+        display: grid;
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .overlapping-pl__products {
+        max-width: 20rem;
+        padding-top: 15rem;
+    }
+    .overlapping-pl__name {
+        padding: 5rem 3rem;
+    }
+    .overlapping-pl__products-list .product-card {
+        padding: 0;
+    }
+}
+
+@media (min-width:1200px) {
+    .overlapping-pl__products {
+        max-width: 30rem;
+    }
+    .overlapping-pl__name {
+        padding: 2rem 5.5rem;
+    }
+    .overlapping-pl__products-list {
+        padding: 20px 40px;
+    }
+}
+
+@media (min-width:1441px) {
+    .overlapping-pl__products {
+        max-width: 40rem;
+    }
+}
+
+@media (max-width:1024px) {
+    .overlapping-pl__products {
+        width: 100%;
+        max-width: 100%;
+    }
+    .overlapping-pl__products-list {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(28%, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(28%, 1fr));
+        overflow-x: auto;
+        padding-bottom: 15px;
+        scroll-snap-type: x mandatory;
+    }
+    .overlapping-pl__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    .overlapping-pl__content_wrapper {
+        position: unset;
+    }
+    .overlapping-pl__products-list .product-card-item {
+        padding: 0 var(--product-space);
+    }
+}
+
+@media (max-width:767px) {
+    .overlapping-pl__products-list {
+        grid-auto-columns: minmax(42%, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(42%, 1fr));
+    }
+    .overlapping-pl__name {
+        padding: 2rem 15px 10px;
+    }
+    .overlapping-pl__products-list {
+        padding: 20px 5px;
+    }
+}
+
+@media (max-width:575px) {
+    .overlapping-pl__products-list {
+        grid-auto-columns: minmax(62%, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(62%, 1fr));
+    }
+}

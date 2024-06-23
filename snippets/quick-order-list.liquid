@@ -1,0 +1,232 @@
+{% liquid
+  assign variantList = product.variants
+  if section.settings.hide_quick_order_sold_items
+    assign variantList = product.variants | where: 'available', true
+  endif
+  assign totalQty = 0
+  assign subtotalPrice = 0
+%}
+<div
+  class="quick-order-list"
+  data-cart-item-count="{{ cart.item_count }}"
+  data-section="{{ section.id }}"
+  data-quick-order-list-wrapper
+>
+  <div class="container-sm">
+    <div class="quick-order-list-content">
+      <div class="table-responsive">
+        <table clas="quick-order-list-table">
+          <thead>
+            <tr>
+              <th
+                {% if section.settings.show_quick_order_item_image %}
+                  colspan="2"
+                {% endif %}
+                class=""
+                scope="col"
+              >
+                {{ 'cart.headings.variant' | t }}
+              </th>
+              <th class="" scope="col">{{ 'cart.headings.quantity' | t }}</th>
+              <th class="" scope="col">{{ 'cart.headings.price' | t }}</th>
+              <th class="" scope="col">{{ 'cart.headings.variant_total' | t }}</th>
+            </tr>
+          </thead>
+          <tbody data-cart-items="">
+            {% for variant in variantList %}
+              {% liquid
+                assign variantQuantity = cart | line_items_for: variant | sum: 'quantity'
+                assign totalQty = totalQty | plus: variantQuantity
+                assign finalLinePrice = variant.price | times: variantQuantity
+                assign subtotalPrice = subtotalPrice | plus: finalLinePrice
+                if product.has_only_default_variant
+                  assign item = product
+                else
+                  assign item = variant
+                endif
+              %}
+              <tr
+                {% if variantQuantity > 0 %}
+                  data-added-item="{{ variant.id }}"
+                {% endif %}
+              >
+                {% if section.settings.show_quick_order_item_image %}
+                  <td scope="row" data-label="product img">
+                    <div class="order-list-variant-img">
+                      <div class="image-wrapper" style="--img-ratio:100%">
+                        {%- liquid
+                          if item.featured_media != blank
+                            render 'lazy-image', image: item.featured_media.preview_image, sizes: '[100,150,200,250]'
+                          endif
+                        -%}
+                      </div>
+                    </div>
+                  </td>
+                {% endif %}
+                <td class="order-list-variant-details-column" data-label="product detail">
+                  <div class="order-list-variant-details">
+                    <p class="order-list-variant-name">
+                      {{ item.title }}
+                    </p>
+                    {% if section.settings.show_quick_order_item_sku and item.sku != blank %}
+                      <p class="order-list-variant-name sku">{{ item.sku }}</p>
+                    {% endif %}
+                  </div>
+                </td>
+                <td class="order-list-variant-quantity" data-label="quantity">
+                  {% if variant.available %}
+                    <quick-list-handler class="quantity" data-variant="{{ variant.id }}" data-quantity-wrapper>
+                      <button
+                        type="button"
+                        class="quantity-button quantity-down quick-order-list-quantity focus-inside"
+                        aria-label="{{ 'cart.headings.decrease_qty' | t }}"
+                        data-quantity-decrement=""
+                        {% if item.available == false or variantQuantity == 0 %}
+                          disabled
+                        {% endif %}
+                      >
+                        <span class="hidden">{{ 'cart.headings.decrease_qty' | t }}</span>
+                        <svg x="0px" y="0px" width="14px" height="14px" viewBox="0 0 14 14">
+                          <rect x="6" transform="matrix(6.123234e-17 -1 1 6.123234e-17 0 14)" width="2.1" height="14"></rect>
+                        </svg>
+                      </button>
+                      <label class="hidden" for="quantity-{{ forloop.index }}-{{ section.id }}">
+                        {{- 'cart.headings.quantity' | t -}}
+                      </label>
+                      <input
+                        id="quantity-{{ forloop.index }}-{{ section.id }}"
+                        class="quantity-input focus-inside quick-order-list-quantity"
+                        type="number"
+                        min="0"
+                        step="1"
+                        data-quantity="{{ variantQuantity }}"
+                        value="{{ variantQuantity }}"
+                        data-quantity-input
+                        aria-label="{{- 'cart.headings.quantity' | t -}}"
+                        {% if item.available == false %}
+                          disabled
+                        {% endif %}
+                      >
+                      <button
+                        type="button"
+                        class="quantity-button quantity-up quick-order-list-quantity focus-inside"
+                        aria-label="{{ 'cart.headings.increase_qty' | t }}"
+                        data-quantity-increment=""
+                        {% if item.available == false %}
+                          disabled
+                        {% endif %}
+                      >
+                        <span class="hidden">{{ 'cart.headings.increase_qty' | t }}</span>
+                        <svg x="0px" y="0px" width="12px" height="12px" viewBox="0 0 14 14">
+                          <polygon points="14,6 8,6 8,0 6,0 6,6 0,6 0,8 6,8 6,14 8,14 8,8 14,8 "></polygon>
+                        </svg>
+                      </button>
+                      {% if variantQuantity > 0 %}
+                        <button class="cart-item-remove" aria-label="{{ 'cart.remove' | t }}">
+                          <svg viewBox="0 0 17.5 17.51" fill="currentColor">
+                            <g><g><path d="m16.75,3.95h-1.76s-.03,0-.05,0-.03,0-.05,0h-.87c.02-.07.04-.13.04-.2v-1.49C13.98.94,12.85-.07,11.53,0h-5.56c-1.31-.05-2.42.95-2.5,2.26v1.49c0,.07.02.13.04.2H.75c-.41,0-.75.34-.75.75s.34.75.75.75h1v9.79s0,.02,0,.03c.09,1.32,1.24,2.32,2.56,2.23h8.88s.02,0,.03,0c1.32.07,2.46-.94,2.53-2.26V5.45h1c.41,0,.75-.34.75-.75s-.34-.75-.75-.75Zm-11.78-.2v-1.49c0-.41.45-.76,1-.76h5.59c.52,0,1,.35,1,.76v1.49s0,.01,0,.02c0,.06.02.12.04.18h-7.67c.02-.07.04-.13.04-.2Zm9.16,11.49c0,.41-.44.76-1,.76H4.25c-.53,0-1-.35-1-.76V5.45h10.88v9.79Z"></path><path d="m6.97,13.75s0,0,.01,0c.41,0,.75-.35.74-.76v-4.52c0-.41-.34-.75-.75-.75s-.75.34-.75.75v4.53c0,.41.34.74.75.75Z"></path><path d="m10.53,13.75c.42,0,.75-.34.75-.76v-4.52c0-.41-.34-.75-.75-.75s-.75.34-.75.75v4.53c0,.41.34.75.75.75Z"></path></g></g>
+                          </svg>
+                        </button>
+                      {% endif %}
+                    </quick-list-handler>
+                    <div class="cart-item-error form-message__wrapper small-error error hidden" role="status">
+                      <p class="form-message__title">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <circle cx="10" cy="10" r="10" fill="currentColor"></circle>
+                          <path d="M7.05331 7L10.004 10.0269L7 13M12.9467 7L9.99602 10.0269L13 13" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <span data-error-text></span>
+                      </p>
+                    </div>
+                  {% else %}
+                    {{ 'products.product.sold_out' | t }}
+                  {% endif %}
+                </td>
+                <td class="order-list-variant-price" data-label="price">
+                  <div class="product-prizebox">
+                    <span class="product-actual-price">{{ variant.price | money }}</span>
+                    {% if variant.compare_at_price > variant.price %}
+                      <span class="product-compare-price">
+                        {{- variant.compare_at_price | money -}}
+                      </span>
+                    {% endif %}
+                  </div>
+                </td>
+                <td class="order-list-variant-totals" data-label="Variant total">
+                  <div class="product-prizebox">
+                    <span class="product-actual-price">{{ finalLinePrice | money }}</span>
+                  </div>
+                  <span class="btn-loader">
+                    <svg width="25" height="25" viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" fill="none" stroke="currentColor" stroke-width="6" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+                        <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+                      </circle>
+                    </svg>
+                  </span>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="quick-order-list-totals">
+        <div class="quick-order-list-totals-info">
+          <div class="quick-order-total-action">
+            <a href="{{ routes.cart_url }}" class="unstyled-link  button small-btn icon-btn right-icon  {{ settings.button_style }}" aria-label="{{ 'cart.view_cart' | t }}" >
+              {% comment %} <span>{{ 'cart.view_cart' | t }}</span>
+              <span class="btn-icon">
+                <svg version="1.1" viewBox="0 0 63 10">
+                  <path fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" d="M0,9h60l-8-8"></path>
+                </svg> 
+              </span> {% endcomment %}
+                {% assign buttonText =  'cart.view_cart' | t %}
+                {% render 'button-style', buttonText: buttonText %}
+            </a>
+            {% if totalQty > 0 %}
+              <quick-list-handler
+                class="unstyled-link button small-btn icon-btn right-icon {{ settings.button_style }} cursor-pointer remove-all"
+                aria-label="{{ 'cart.remove_all' | t }}" 
+              >
+                {% comment %} <span class="btn-text">{{ 'cart.remove_all' | t }}</span>
+                <span class="btn-icon">
+                  <svg viewBox="0 0 100 100" fill="none">
+                    <path d="M98.232 53.2256C98.6928 52.304 98.8464 51.2287 98.8464 50.1535C98.8464 50.1535 98.8464 50.1535 98.8464 49.8463C98.8464 49.5391 98.8464 49.6927 98.8464 49.5391C98.8464 48.4639 98.6928 47.3886 98.232 46.467C97.9247 45.5454 97.3103 44.9309 96.6959 44.1629C96.6959 44.0093 96.5423 43.8557 96.3887 43.7021L56.1442 3.45758C52.7649 0.078268 47.2351 0.078268 43.8558 3.45758C40.4765 6.83689 40.4765 12.3667 43.8558 15.746L69.3542 41.2444H9.60188C4.84012 41.2444 1 45.0845 1 49.8463C1 54.6081 4.84012 58.4482 9.60188 58.4482H69.3542L43.8558 83.9466C40.4765 87.3259 40.4765 92.8557 43.8558 96.235C45.5454 97.9247 47.6959 98.6927 50 98.6927C52.3041 98.6927 54.4545 97.9247 56.1442 96.235L96.3887 55.9905C96.3887 55.9905 96.5423 55.6833 96.6959 55.5297C97.3103 54.9153 97.7711 54.1472 98.232 53.2256Z" fill="currentColor"></path>
+                  </svg>
+                </span> {% endcomment %}
+                {% assign buttonText =  'cart.remove_all' | t %}
+                {% render 'button-style', buttonText: buttonText %}
+                <span class="btn-loader">
+                  <svg width="25" height="25" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" fill="none" stroke="currentColor" stroke-width="6" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+                      <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+                    </circle>
+                  </svg>
+                </span>
+              </quick-list-handler>
+            {% endif %}
+          </div>
+          <div class="quick-order-total-price">
+            <p>{{ 'cart.headings.subtotal' | t }}</p>
+            <span class="total-price-value">
+              <strong>{{ subtotalPrice | money }}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  td.order-list-variant-totals.loading .product-prizebox,
+  quick-list-handler.loading .btn-text {
+    display: none;
+    pointer-events: none;
+  }
+
+  td.order-list-variant-totals.loading .btn-loader {
+    display: block;
+  }
+  quick-list-handler.loading.quantity {
+    pointer-events: none;
+  }
+</style>

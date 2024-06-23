@@ -1,0 +1,17 @@
+<div class="text-marque__item{% if block.settings.small_icon %} small-icon{% endif %} text-shadow-{{ block.settings.enable_text_shadow }}{% if section.settings.show_marquees_in_one_row %} text-marque_{{ block.id }}{% endif %}">
+    {% if block.settings.text != blank %}
+    <span
+        class="marqueeNode-{{ block.id }} rte {% if block.settings.enable_highlight %} highlight-text{% endif %} {{ block.settings.font_family }}-font marquee-text"
+        style="--outline-thickness:{{ block.settings.outline_thickness }}"
+    >
+        {{- block.settings.text -}}
+    </span>
+    {% endif %}
+    {% if block.settings.custom_icon != blank %}
+    <span
+        class="marqueeNode-{{ block.id }} marquee-icon{% if block.settings.default_color %} default-color{% endif %}"
+    >
+        {{- block.settings.custom_icon -}}
+    </span>
+    {% endif %}
+</div>

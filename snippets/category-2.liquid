@@ -1,0 +1,100 @@
+
+<div class="custom-scrolling-list__outer">
+    {% if section.settings.heading != blank %}
+        <div class="container">
+          <div class="section-heading-box text-{{ section.settings.text_alignment }}">
+            {%- capture higlightPrefix -%}
+            <span class="marker">
+            {%- endcapture -%}
+            {%- capture highlightSuffix -%}
+                {%- render 'marker-text-style' marker_style: section.settings.higlight_style -%}
+            {%- endcapture -%}
+      
+            <{{ section.settings.seo_heading_tag }} class="section-heading-title rte{% if section.settings.enable_highlight %} highlight-text{% endif %} {{ section.settings.heading_size }}" style="--outline-thickness:{{ section.settings.outline_thickness }};--marker-svg:{{ section.settings.marker_color }};--marker:{{ section.settings.marker_text_color }}">
+              {{ section.settings.heading | replace: "[[", higlightPrefix | replace: "]]", highlightSuffix }}
+            </{{ section.settings.seo_heading_tag }}>
+          </div>
+        </div>
+    {% endif %}
+    {%- for block in section.blocks -%}
+     
+        {% if block.settings.collection_bg_color == 'rgba(0,0,0,0)' or  block.settings.collection_bg_color == '' %}
+            {% if section.settings.enable_gradiant %}
+                {% assign backgroundColor =  'var(--gradiant-bg)' %}
+            {% else %}
+            {% assign backgroundColor =  'var(--body-bg)' %}
+            {% endif %}
+        {% else %}
+            {% assign backgroundColor =  block.settings.collection_bg_color %}
+        {% endif %}
+
+    <div class="background-color-wrapper {% if section.settings.onscroll_background == 'circle' %} background-circle-enabled{% endif %} background-color-{{ forloop.index0 }}{% if forloop.first %} active{% endif %}" style=" background: {{ backgroundColor }};"></div>
+    {% endfor %}
+    <div class="bs-categories__wrapper ">
+        <div class="custom-scrolling-list__images ">
+        {%- for block in section.blocks -%}
+            {%- liquid
+            assign imageContent = ''
+            assign collection = ''
+            assign collection = block.settings.collection
+            if block.settings.image != blank
+            assign imageContent = block.settings.image
+            elsif collection.featured_image
+            assign imageContent = collection.featured_image
+            endif
+        -%}
+        <div class="custom-scrolling-list__img{% if forloop.first %} active{% endif %} " data-image-index="{{ forloop.index0 }}">
+            {%- if imageContent != blank -%}
+            {%- render 'lazy-image', image: imageContent -%}
+            {%- else -%}
+            {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+        </div>
+            {% endfor %}
+        </div>
+        <div class="custom-scrolling-list__scrollbar" data-item-right="{% if section.blocks.size == 4 or section.blocks.size == 3 %}2.1{% else %}1.2{% endif %}">
+        {%- for block in section.blocks -%}
+            {%- liquid
+            assign imageContent = ''
+            assign collection = ''
+            assign collection = block.settings.collection
+            if block.settings.image != blank
+            assign imageContent = block.settings.image
+            elsif collection.featured_image
+            assign imageContent = collection.featured_image
+            endif
+        -%}
+            <div
+            class="custom-scrolling-list__item{% if section.settings.radius_enable %} radius-enabled{% endif %} {% if forloop.first and section.blocks.size ==1 %} active{% endif %}"
+            data-srollinghorizontal-element
+            data-index="{{ forloop.index0 }}"
+            data-color="{{ block.settings.collection_bg_color }}"
+            {{ block.shopify_attributes }}>
+            <a
+                class="unstyled-link custom-scrolling-list__img-link"
+                aria-label="{%- if block.settings.collection_heading != blank -%}{{ block.settings.collection_heading -}}{%- elsif collection != blank -%}{{- collection.title | strip_html -}}{%- else -%}{{- 'sections.onboarding_collection.title' | t -}}{%- endif %}"
+                data-collection-carousel-link
+                {% if collection.url == blank %}role="link"aria-disabled="true"{% else %}href="{{ collection.url | default : '#' }}"{% endif %}>
+                {%- if imageContent != blank -%}
+                    {%- render 'lazy-image', image: imageContent -%}
+                {%- else -%}
+                    {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+            </a>
+            <a
+                class="unstyled-link custom-scrolling-list__head {{ section.settings.block_heading_size }} heading-font"
+                aria-label="{%- if block.settings.collection_heading != blank -%}{{ block.settings.collection_heading -}}{%- elsif collection != blank -%}{{- collection.title | strip_html -}}{%- else -%}{{- 'sections.onboarding_collection.title' | t -}}{%- endif %} "
+                {% if collection.url == blank %}role="link"aria-disabled="true"{% else %}href="{{ collection.url | default : '#' }}"{% endif %}tabindex="-1"data-text="{%- if block.settings.collection_heading != blank -%}{{ block.settings.collection_heading -}}{%- elsif collection != blank -%}{{- collection.title | strip_html -}}{%- else -%}{{- 'sections.onboarding_collection.title' | t -}}{%- endif %}">
+                {%- if block.settings.collection_heading != blank -%}
+                {{ block.settings.collection_heading -}}
+                {%- elsif collection != blank -%}
+                {{- collection.title | strip_html -}}
+                {%- else -%}
+                {{ 'sections.onboarding_collection.title' | t }}
+                {%- endif %}
+            </a>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>

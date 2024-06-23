@@ -1,0 +1,54 @@
+<ul class="custom-content-navigation-{{ section.id }} custom-content-navigation list-unstyled slider{% if section.settings.rotate %} autoplay-on{% endif %}"  {% if section.blocks.size>1 %} data-theme-slider='{
+    "cellAlign": "left",
+    "wrapAround": false,
+    "asNavFor": ".slider-show-main-{{ section.id }}",
+    "contain": true,
+    "resize": true,
+    "pageDots": false,
+    "fade":false,
+    "prevNextButtons": false,
+    "rightToLeft":{%- if rtlEnable -%}true{%- else -%}false{%- endif -%},
+    "groupCells": true
+    }'{% endif %}>
+    {% for block in section.blocks %}
+
+        {% liquid
+            assign hedingStatus = false
+            if block.settings.heading != blank and section.settings.tab_content_type == 'heading' 
+                assign hedingStatus = true
+            elsif block.settings.heading != blank and section.settings.tab_content_type == 'both' 
+            assign hedingStatus = true
+            endif
+            
+            assign descriptionStatus = false
+            if block.settings.description != blank and section.settings.tab_content_type == 'description' 
+                assign descriptionStatus = true
+            elsif block.settings.description != blank and section.settings.tab_content_type == 'both' 
+            assign descriptionStatus = true
+            endif 
+        %}
+        <li class="custom-content-navigation-item">
+            <div class="custom-content-navigation-progress"></div>
+            {% if hedingStatus %}
+            <p class="custom-content-navigation-text">{{ block.settings.heading }}</p>
+            {% endif %}
+            {% if descriptionStatus %}
+                <p class="custom-content-navigation-text">{{ block.settings.description }}</p>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+<style>
+{% if section.settings.rotate == false %}
+    .custom-content-navigation-item.is-nav-selected .custom-content-navigation-progress:after {
+        animation: line-fill {{section.settings.interval }}s linear 1;
+        width:100%
+    }
+{% endif %}
+.autoplay-on .custom-content-navigation-item.is-nav-selected .custom-content-navigation-progress:after {
+    animation: line-fill {{section.settings.interval }}s linear 1;
+    width:100%
+}
+
+
+</style>
