@@ -166,17 +166,18 @@
         "template--18467116384578__e4e40b28-a38b-4200-98a2-7f272ce34292-167998659167e84cdf-0": {
           "type": "slide",
           "settings": {
-            "heading": "Slide title",
+            "heading": "Track Your Progress",
             "seo_heading_tag": "h1",
             "enable_highlight": false,
-            "solid_stroke": "solid",
+            "solid_stroke": "stroke",
             "outline_thickness": "1px",
-            "description": "Describe information about the slide.",
-            "btn_text": "Button text",
+            "description": "Stay on top of your fitness goals with our advanced fitness trackers",
+            "btn_text": "SHOP NOW",
             "btn_link": "shopify:\/\/collections\/all",
             "size": "med",
             "content_width": "medium",
-            "heading_color": "#afafaf",
+            "image_desktop": "shopify:\/\/shop_images\/fitnear_gear_banner_2.webp",
+            "heading_color": "#ffffff",
             "heading_animate": "#0b0e0d",
             "background_color": "#0b0e0d",
             "desc_color": "#939393",
@@ -262,7 +263,6 @@
         "template--18467116384578__e4e40b28-a38b-4200-98a2-7f272ce34292-167998659167e84cdf-1",
         "template--18467116384578__e4e40b28-a38b-4200-98a2-7f272ce34292-167998659167e84cdf-2"
       ],
-      "disabled": true,
       "settings": {
         "section_visibility": "always",
         "navigation_style": "image",
