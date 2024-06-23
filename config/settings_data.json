@@ -9,10 +9,11 @@
 */
 {
   "current": {
+    "content_direction": false,
     "header_background_color": "#000000",
     "header_text_color": "#ffffff",
     "header_hover_color": "#ffffff",
-    "header_divider_color": "#1B1B1B",
+    "header_divider_color": "#1b1b1b",
     "header_icon_backgrodund": "rgba(0,0,0,0)",
     "submenu_background_color": "#000000",
     "submenu_text_color": "#ffffff",
