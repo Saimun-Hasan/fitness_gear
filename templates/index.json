@@ -263,6 +263,7 @@
         "template--18467116384578__e4e40b28-a38b-4200-98a2-7f272ce34292-167998659167e84cdf-1",
         "template--18467116384578__e4e40b28-a38b-4200-98a2-7f272ce34292-167998659167e84cdf-2"
       ],
+      "disabled": true,
       "settings": {
         "section_visibility": "always",
         "navigation_style": "image",
