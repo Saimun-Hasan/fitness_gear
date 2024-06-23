@@ -53,7 +53,7 @@
         "mobile_transparent_header": true,
         "enable_background_blur": false,
         "background_container_header": false,
-        "transparent_color": "#737373",
+        "transparent_color": "#ffffff",
         "bg_color": "#ffffff",
         "overlay_opacity": 0,
         "menu": "main-menu",
