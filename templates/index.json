@@ -431,8 +431,8 @@
         "collection_gmVqkb": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "collection_heading": "",
+            "collection": "posture-correctors",
+            "collection_heading": "Posture Enhancers",
             "collection_bg_color": ""
           }
         },
@@ -474,14 +474,14 @@
         "grid_image_size": "auto",
         "grid_image_fit": "cover",
         "enable_image_bg": true,
-        "heading": "Best selling categories",
+        "heading": "Best selling",
         "enable_highlight": false,
         "higlight_style": "basic",
         "outline_thickness": "1px",
-        "heading_size": "h5",
+        "heading_size": "h2",
         "seo_heading_tag": "h3",
         "text_alignment": "left",
-        "block_heading_size": "h3",
+        "block_heading_size": "h1",
         "color_scheme": "primary",
         "enable_gradiant": false,
         "marker_color": "#000000",
