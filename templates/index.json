@@ -334,24 +334,13 @@
         "template--18467116384578__6ae2de99-dd84-4f12-a1a6-e82fe9f56fea-1679987859de1dfe8a-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Use this section to welcome customers to your store, say a bit about your brand, or share news and seasonal promotions.<\/p>"
-          }
-        },
-        "button_mGpTC6": {
-          "type": "button",
-          "settings": {
-            "text": "SHOW PRODUCTS",
-            "link": "",
-            "size": "large",
-            "button_style": "main",
-            "button_as_link": false
+            "text": "<p>At Fitness Gear, we believe in empowering individuals to achieve their fitness goals through high-quality products designed to support and enhance your health journey. Explore our range of premium fitness tools that cater to all your workout needs.<\/p>"
           }
         }
       },
       "block_order": [
         "template--18467116384578__6ae2de99-dd84-4f12-a1a6-e82fe9f56fea-1679987859de1dfe8a-0",
-        "template--18467116384578__6ae2de99-dd84-4f12-a1a6-e82fe9f56fea-1679987859de1dfe8a-1",
-        "button_mGpTC6"
+        "template--18467116384578__6ae2de99-dd84-4f12-a1a6-e82fe9f56fea-1679987859de1dfe8a-1"
       ],
       "settings": {
         "section_visibility": "always",
@@ -371,7 +360,7 @@
         "border_radius_range": 0,
         "image_position": "left",
         "main_image": "shopify:\/\/shop_images\/fiteness_gear_about.webp",
-        "full_width_image": true,
+        "full_width_image": false,
         "border_main_image": false,
         "background_effect": false,
         "effect_color": "linear-gradient(43deg, rgba(22, 22, 22, 1) 17%, rgba(56, 55, 56, 1) 100%)",
@@ -392,7 +381,7 @@
         "template--18467116384578__aff6f7eb-3bb8-4ba0-ab9a-d8e12207bf74-1679987838383ece3f-0": {
           "type": "text",
           "settings": {
-            "text": "MARQUEE TEXT HERE",
+            "text": "Discover Your Inner Strength | Perfect Your Posture, Perfect Your Life | Every Stretch Counts | Balance Your Body, Balance Your Mind",
             "outline_thickness": "1px",
             "enable_highlight": false,
             "enable_text_shadow": false,
