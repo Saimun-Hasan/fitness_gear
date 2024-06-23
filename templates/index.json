@@ -303,9 +303,10 @@
       ],
       "settings": {
         "section_visibility": "always",
+        "background_image": "shopify:\/\/shop_images\/fitness_gear_banner_4.webp",
         "content_width": "large",
         "text_alignment": "center",
-        "color_scheme": "primary",
+        "color_scheme": "quaternary",
         "enable_gradiant": false,
         "enable_fixed": true,
         "top_space_desktop": 70,
