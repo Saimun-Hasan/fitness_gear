@@ -440,25 +440,16 @@
         "collection_X6Pqk6": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "resistance-bands",
             "collection_heading": "Resistance Bands",
             "collection_bg_color": "#393939"
-          }
-        },
-        "collection_xpEPdd": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "collection_heading": "Fitness Trackers",
-            "collection_bg_color": "#1b1b1b"
           }
         }
       },
       "block_order": [
         "collection_gmVqkb",
         "collection_NLnnMB",
-        "collection_X6Pqk6",
-        "collection_xpEPdd"
+        "collection_X6Pqk6"
       ],
       "settings": {
         "section_visibility": "always",
@@ -570,16 +561,16 @@
         "products_count": 6,
         "grid_image_size": "auto",
         "grid_image_fit": "cover",
-        "heading": "Featured collection",
+        "heading": "BEST SELLERS",
         "enable_highlight": false,
         "higlight_style": "basic",
         "outline_thickness": "1px",
-        "heading_size": "h5",
+        "heading_size": "h2",
         "seo_heading_tag": "h4",
         "heading_space_desktop": 0,
         "heading_space_mobile": 0,
         "view_all_button_text": "View all",
-        "color_scheme": "secondary",
+        "color_scheme": "tertiary",
         "enable_gradiant": false,
         "marker_color": "#000000",
         "marker_text_color": "#000000",
@@ -592,24 +583,31 @@
     "inline_menus_3TRRiX": {
       "type": "inline-menus",
       "blocks": {
+        "collection_F9ib6H": {
+          "type": "collection",
+          "settings": {
+            "heading": "Fitness Trackers",
+            "collection": "fitness-trackers"
+          }
+        },
         "collection_JKL4mB": {
           "type": "collection",
           "settings": {
-            "heading": "Heading",
-            "collection": ""
+            "heading": "Dumbbells & Kettlebells",
+            "collection": "dumbbells-kettlebells"
           }
         },
         "image_text_zjr6eg": {
           "type": "image_text",
           "settings": {
-            "heading": "Heading",
+            "heading": "Balance Boards",
             "url": ""
           }
         },
         "product_list_XypHre": {
           "type": "product_list",
           "settings": {
-            "heading": "Heading",
+            "heading": "Exercise Balls",
             "url": "",
             "product_list": [
 
@@ -619,33 +617,27 @@
         "product_list_mxqnVD": {
           "type": "product_list",
           "settings": {
-            "heading": "Heading",
+            "heading": "Jump Ropes",
             "url": "",
             "product_list": [
 
             ]
           }
-        },
-        "collection_F9ib6H": {
-          "type": "collection",
-          "settings": {
-            "heading": "Heading",
-            "collection": ""
-          }
         }
       },
       "block_order": [
+        "collection_F9ib6H",
         "collection_JKL4mB",
         "image_text_zjr6eg",
         "product_list_XypHre",
-        "product_list_mxqnVD",
-        "collection_F9ib6H"
+        "product_list_mxqnVD"
       ],
       "settings": {
         "section_visibility": "always",
         "desktop_image_style": "scattered",
-        "enable_blur_overlay": false,
-        "blur_opacity": 0,
+        "background_image": "shopify:\/\/shop_images\/fitness_gear_inline_menu_banner_ca78d153-adc2-47cc-b62e-a2610ef96248.webp",
+        "enable_blur_overlay": true,
+        "blur_opacity": 20,
         "enable_first_active": true,
         "heading": "",
         "enable_highlight": false,
@@ -657,7 +649,7 @@
         "heading_space_desktop": 0,
         "heading_space_mobile": 0,
         "block_heading_size": "h2",
-        "color_scheme": "secondary",
+        "color_scheme": "quaternary",
         "enable_gradiant": false,
         "marker_color": "#000000",
         "marker_text_color": "#000000",
