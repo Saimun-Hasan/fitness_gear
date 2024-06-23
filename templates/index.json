@@ -308,6 +308,7 @@
         "template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-0",
         "template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-1"
       ],
+      "disabled": true,
       "settings": {
         "section_visibility": "always",
         "content_width": "large",
@@ -327,7 +328,7 @@
         "template--18467116384578__6ae2de99-dd84-4f12-a1a6-e82fe9f56fea-1679987859de1dfe8a-0": {
           "type": "heading",
           "settings": {
-            "heading": "Heading here"
+            "heading": "Welcome to Fitness Gear"
           }
         },
         "template--18467116384578__6ae2de99-dd84-4f12-a1a6-e82fe9f56fea-1679987859de1dfe8a-1": {
@@ -335,19 +336,30 @@
           "settings": {
             "text": "<p>Use this section to welcome customers to your store, say a bit about your brand, or share news and seasonal promotions.<\/p>"
           }
+        },
+        "button_mGpTC6": {
+          "type": "button",
+          "settings": {
+            "text": "SHOW PRODUCTS",
+            "link": "",
+            "size": "large",
+            "button_style": "main",
+            "button_as_link": false
+          }
         }
       },
       "block_order": [
         "template--18467116384578__6ae2de99-dd84-4f12-a1a6-e82fe9f56fea-1679987859de1dfe8a-0",
-        "template--18467116384578__6ae2de99-dd84-4f12-a1a6-e82fe9f56fea-1679987859de1dfe8a-1"
+        "template--18467116384578__6ae2de99-dd84-4f12-a1a6-e82fe9f56fea-1679987859de1dfe8a-1",
+        "button_mGpTC6"
       ],
       "settings": {
         "section_visibility": "always",
-        "heading": "Multi image with text",
+        "heading": "",
         "enable_highlight": false,
         "higlight_style": "basic",
         "outline_thickness": "1px",
-        "heading_size": "h6",
+        "heading_size": "h1",
         "seo_heading_tag": "h2",
         "heading_space_desktop": 0,
         "heading_space_mobile": 0,
@@ -355,10 +367,11 @@
         "text_alignment": "flex-start_left",
         "content_width": "medium",
         "enable_background_color": false,
-        "enable_animation": false,
+        "enable_animation": true,
         "border_radius_range": 0,
         "image_position": "left",
-        "full_width_image": false,
+        "main_image": "shopify:\/\/shop_images\/fiteness_gear_about.webp",
+        "full_width_image": true,
         "border_main_image": false,
         "background_effect": false,
         "effect_color": "linear-gradient(43deg, rgba(22, 22, 22, 1) 17%, rgba(56, 55, 56, 1) 100%)",
