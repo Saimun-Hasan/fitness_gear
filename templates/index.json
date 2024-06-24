@@ -981,7 +981,7 @@
         "heading_size": "h2",
         "seo_heading_tag": "h3",
         "text_alignment": "left",
-        "block_heading_size": "h4",
+        "block_heading_size": "h2",
         "color_scheme": "secondary",
         "enable_gradiant": false,
         "marker_color": "#f74c25",
