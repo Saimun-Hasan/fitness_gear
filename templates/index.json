@@ -905,6 +905,9 @@
         "collection_z4RrNX",
         "collection_x9DWkD"
       ],
+      "custom_css": [
+        ".best-selling-category-wrapper {background: linear-gradient( 105deg, rgba(106, 173, 40, 1), rgba(249, 253, 60, 1) 100% );}"
+      ],
       "settings": {
         "section_visibility": "always",
         "categories_style": "category-1",
@@ -926,6 +929,50 @@
         "marker_text_color": "#deff12",
         "top_space_desktop": 70,
         "bottom_space_desktop": 70,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 40
+      }
+    },
+    "rich_text_HtpVkU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_miTYrj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Must-Have Fitness Gear for Your Training",
+            "seo_heading_tag": "h2",
+            "higlight_style": "basic",
+            "size": "h1",
+            "style": "none",
+            "outline_thickness": "1px",
+            "heading_space_desktop": 20,
+            "heading_space_mobile": 0,
+            "animate_color1": "#94A5FF",
+            "animate_color2": "#FF3939",
+            "marker_color": "#000000",
+            "marker_text_color": "#000000"
+          }
+        },
+        "text_xUrtMg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover the essential gear that every fitness enthusiast needs for a successful workout. From resistance bands to dumbbells, our must-have equipment ensures you have everything to achieve your fitness goals.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_miTYrj",
+        "text_xUrtMg"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "content_width": "large",
+        "text_alignment": "center",
+        "color_scheme": "primary",
+        "enable_gradiant": false,
+        "enable_fixed": false,
+        "top_space_desktop": 80,
+        "bottom_space_desktop": 80,
         "top_space_mobile": 40,
         "bottom_space_mobile": 40
       }
@@ -965,7 +1012,7 @@
         "text_4NQht3": {
           "type": "text",
           "settings": {
-            "text": "MARQUEE TEXT HERE",
+            "text": "FITNESS GEAR + FREE SHIPPING",
             "outline_thickness": "1px",
             "enable_highlight": false,
             "enable_text_shadow": false,
@@ -973,10 +1020,10 @@
             "scrolling_speed": 15,
             "scrolling_speed_mobile": 15,
             "font_family": "heading",
-            "desktop_font": 44,
+            "desktop_font": 100,
             "mobile_font": 40,
             "bgcolor": "",
-            "color": "",
+            "color": "#cdcfd8",
             "highlight_color": "",
             "shadow_color": "",
             "custom_icon": "",
@@ -996,15 +1043,37 @@
         "direction": "rtl",
         "text_angle": 0,
         "section_visibility": "always",
+        "image": "shopify:\/\/shop_images\/close-up-camera-against-white-background_2.webp",
         "min_height_desktop": 400,
         "min_height_mobile": 200,
         "scrolling_speed": 15,
         "scrolling_speed_mobile": 15,
-        "bgcolor": "#000000",
+        "bgcolor": "#e5e4e4",
         "background_effect": false,
         "effect_color": "radial-gradient(circle, rgba(255, 205, 193, 1) 0%, rgb(254 224 224 \/ 0%) 100%)",
         "top_space_desktop": 30,
         "bottom_space_desktop": 25,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 0
+      }
+    },
+    "video_hBpQQM": {
+      "type": "video",
+      "settings": {
+        "section_visibility": "always",
+        "videourl": "shopify:\/\/files\/videos\/fitness_gear.webm",
+        "video_style": "square",
+        "make_circle_style_fix": true,
+        "heading": "Elevate Your Fitness – Shop Now!",
+        "seo_heading_tag": "h2",
+        "font_family": "heading",
+        "style": "shadow",
+        "outline_thickness": "1px",
+        "color_scheme": "secondary",
+        "enable_gradiant": false,
+        "text_shadow_color": "#565656",
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 70,
         "top_space_mobile": 40,
         "bottom_space_mobile": 0
       }
@@ -1071,26 +1140,6 @@
         "inner_color_scheme": "secondary",
         "overlay_color": "#000000",
         "overlay_opacity": 0,
-        "top_space_desktop": 70,
-        "bottom_space_desktop": 70,
-        "top_space_mobile": 40,
-        "bottom_space_mobile": 0
-      }
-    },
-    "video_hBpQQM": {
-      "type": "video",
-      "settings": {
-        "section_visibility": "always",
-        "video_style": "square",
-        "make_circle_style_fix": true,
-        "heading": "Video text here",
-        "seo_heading_tag": "h2",
-        "font_family": "heading",
-        "style": "shadow",
-        "outline_thickness": "1px",
-        "color_scheme": "primary",
-        "enable_gradiant": false,
-        "text_shadow_color": "#565656",
         "top_space_desktop": 70,
         "bottom_space_desktop": 70,
         "top_space_mobile": 40,
@@ -1297,10 +1346,11 @@
     "multi_image_with_text_aDDjbK",
     "overlapping_product_list_tfbFnA",
     "best_selling_categories_JHDGyD",
+    "rich_text_HtpVkU",
     "featured_collection_itV4WH",
     "marquee_text_3xKbeN",
-    "b736ec94-8315-4e0a-bfe8-36db0e074724",
     "video_hBpQQM",
+    "b736ec94-8315-4e0a-bfe8-36db0e074724",
     "featured_products_RVQb6y",
     "821febdb-d6fd-4c3e-b63a-7ce6d199e794",
     "4d96c2ef-0df8-433f-8bf9-6f1ae44287b9",
