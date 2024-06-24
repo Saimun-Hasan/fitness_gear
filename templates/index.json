@@ -918,8 +918,7 @@
       ],
       "custom_css": [
         ".best-selling-category-wrapper {background: linear-gradient( 105deg, rgba(106, 173, 40, 1), rgba(249, 253, 60, 1) 100% ) !important;}",
-        ".flickity-viewport {overflow: visible;}",
-        ".bs-categories__content__item.is-selected.is-nav-selected .bs-categories__content__heading {color: #000000; margin-top: -100px; display: flex; align-items: center; justify-content: center;}"
+        ".flickity-viewport {overflow: visible;}"
       ],
       "settings": {
         "section_visibility": "always",
