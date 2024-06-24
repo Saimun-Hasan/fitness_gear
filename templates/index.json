@@ -303,13 +303,64 @@
       ],
       "settings": {
         "section_visibility": "always",
+        "background_image": "shopify:\/\/shop_images\/stroke_banner_6bb3bd6a-dfec-43d3-b955-3b320321f0b6.webp",
         "content_width": "large",
         "text_alignment": "center",
-        "color_scheme": "primary",
+        "color_scheme": "secondary",
         "enable_gradiant": false,
         "enable_fixed": false,
         "top_space_desktop": 70,
         "bottom_space_desktop": 70,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 0
+      }
+    },
+    "aff6f7eb-3bb8-4ba0-ab9a-d8e12207bf74": {
+      "type": "marquee-text",
+      "blocks": {
+        "template--18467116384578__aff6f7eb-3bb8-4ba0-ab9a-d8e12207bf74-1679987838383ece3f-0": {
+          "type": "text",
+          "settings": {
+            "text": "Discover Your Inner Strength | Perfect Your Posture, Perfect Your Life | Every Stretch Counts | Balance Your Body, Balance Your Mind",
+            "outline_thickness": "1px",
+            "enable_highlight": false,
+            "enable_text_shadow": false,
+            "text_gap": 15,
+            "scrolling_speed": 15,
+            "scrolling_speed_mobile": 15,
+            "font_family": "heading",
+            "desktop_font": 80,
+            "mobile_font": 40,
+            "bgcolor": "",
+            "color": "#4b4b4a",
+            "highlight_color": "",
+            "shadow_color": "",
+            "custom_icon": "",
+            "small_icon": false,
+            "icon_color": "",
+            "text_icon_gap": 15,
+            "default_color": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18467116384578__aff6f7eb-3bb8-4ba0-ab9a-d8e12207bf74-1679987838383ece3f-0"
+      ],
+      "settings": {
+        "enable_autoplay": true,
+        "show_marquees_in_one_row": false,
+        "direction": "rtl",
+        "text_angle": 0,
+        "section_visibility": "always",
+        "min_height_desktop": 400,
+        "min_height_mobile": 200,
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "bgcolor": "#2b2b2b",
+        "background_effect": false,
+        "effect_color": "radial-gradient(circle, rgba(255, 205, 193, 1) 0%, rgb(254 224 224 \/ 0%) 100%)",
+        "top_space_desktop": 20,
+        "bottom_space_desktop": 20,
         "top_space_mobile": 40,
         "bottom_space_mobile": 0
       }
@@ -334,6 +385,7 @@
         "template--18467116384578__6ae2de99-dd84-4f12-a1a6-e82fe9f56fea-1679987859de1dfe8a-0",
         "template--18467116384578__6ae2de99-dd84-4f12-a1a6-e82fe9f56fea-1679987859de1dfe8a-1"
       ],
+      "disabled": true,
       "settings": {
         "section_visibility": "always",
         "heading": "",
@@ -367,63 +419,13 @@
         "bottom_space_mobile": 0
       }
     },
-    "aff6f7eb-3bb8-4ba0-ab9a-d8e12207bf74": {
-      "type": "marquee-text",
-      "blocks": {
-        "template--18467116384578__aff6f7eb-3bb8-4ba0-ab9a-d8e12207bf74-1679987838383ece3f-0": {
-          "type": "text",
-          "settings": {
-            "text": "Discover Your Inner Strength | Perfect Your Posture, Perfect Your Life | Every Stretch Counts | Balance Your Body, Balance Your Mind",
-            "outline_thickness": "1px",
-            "enable_highlight": false,
-            "enable_text_shadow": false,
-            "text_gap": 15,
-            "scrolling_speed": 15,
-            "scrolling_speed_mobile": 15,
-            "font_family": "heading",
-            "desktop_font": 80,
-            "mobile_font": 40,
-            "bgcolor": "",
-            "color": "",
-            "highlight_color": "",
-            "shadow_color": "",
-            "custom_icon": "",
-            "small_icon": false,
-            "icon_color": "",
-            "text_icon_gap": 15,
-            "default_color": false
-          }
-        }
-      },
-      "block_order": [
-        "template--18467116384578__aff6f7eb-3bb8-4ba0-ab9a-d8e12207bf74-1679987838383ece3f-0"
-      ],
-      "settings": {
-        "enable_autoplay": true,
-        "show_marquees_in_one_row": false,
-        "direction": "rtl",
-        "text_angle": 0,
-        "section_visibility": "always",
-        "min_height_desktop": 400,
-        "min_height_mobile": 200,
-        "scrolling_speed": 15,
-        "scrolling_speed_mobile": 15,
-        "bgcolor": "#181818",
-        "background_effect": false,
-        "effect_color": "radial-gradient(circle, rgba(255, 205, 193, 1) 0%, rgb(254 224 224 \/ 0%) 100%)",
-        "top_space_desktop": 20,
-        "bottom_space_desktop": 20,
-        "top_space_mobile": 40,
-        "bottom_space_mobile": 0
-      }
-    },
     "collection_carousel_eKmtct": {
       "type": "collection-carousel",
       "blocks": {
         "collection_rYykef": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "posture-correctors",
             "collection_heading": "",
             "collection_bg_color": ""
           }
@@ -431,7 +433,7 @@
         "collection_nPtpew": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "yoga-mats",
             "collection_heading": "",
             "collection_bg_color": ""
           }
@@ -439,23 +441,7 @@
         "collection_MFNqMy": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "collection_heading": "",
-            "collection_bg_color": ""
-          }
-        },
-        "collection_EwXiyp": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "collection_heading": "",
-            "collection_bg_color": ""
-          }
-        },
-        "collection_8FyKbP": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
+            "collection": "fitness-trackers",
             "collection_heading": "",
             "collection_bg_color": ""
           }
@@ -464,18 +450,16 @@
       "block_order": [
         "collection_rYykef",
         "collection_nPtpew",
-        "collection_MFNqMy",
-        "collection_EwXiyp",
-        "collection_8FyKbP"
+        "collection_MFNqMy"
       ],
       "settings": {
         "section_visibility": "always",
         "carousel_style": "carousel-1",
-        "heading": "Collection carousel",
+        "heading": "Best Selling",
         "enable_highlight": false,
         "higlight_style": "basic",
         "outline_thickness": "1px",
-        "heading_size": "h5",
+        "heading_size": "h2",
         "seo_heading_tag": "h3",
         "view_all_button_text": "View all",
         "btn_link": "shopify:\/\/collections\/all",
@@ -483,7 +467,7 @@
         "circular_border": false,
         "title_color": "#000000",
         "title_alignment": "left",
-        "color_scheme": "primary",
+        "color_scheme": "tertiary",
         "marker_color": "#000000",
         "marker_text_color": "#000000",
         "background_gradient": "",
@@ -525,6 +509,7 @@
         "collection_NLnnMB",
         "collection_X6Pqk6"
       ],
+      "disabled": true,
       "settings": {
         "section_visibility": "always",
         "categories_style": "category-2",
@@ -1224,8 +1209,8 @@
     "3da8c6dc-33c1-412a-9abe-97476c5cc0da",
     "e4e40b28-a38b-4200-98a2-7f272ce34292",
     "a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82",
-    "6ae2de99-dd84-4f12-a1a6-e82fe9f56fea",
     "aff6f7eb-3bb8-4ba0-ab9a-d8e12207bf74",
+    "6ae2de99-dd84-4f12-a1a6-e82fe9f56fea",
     "collection_carousel_eKmtct",
     "best_selling_categories_ByxKg3",
     "00d317c9-b1b5-4ff4-80bb-eec7126176e0",
