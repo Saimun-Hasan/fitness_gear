@@ -610,7 +610,7 @@
         "enable_highlight": false,
         "higlight_style": "basic",
         "outline_thickness": "1px",
-        "heading_size": "h5",
+        "heading_size": "h2",
         "seo_heading_tag": "h4",
         "heading_space_desktop": 0,
         "heading_space_mobile": 0,
