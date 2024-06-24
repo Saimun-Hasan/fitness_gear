@@ -947,6 +947,35 @@
         "bottom_space_mobile": 40
       }
     },
+    "featured_collection_itV4WH": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "section_visibility": "always",
+        "stacked_products": true,
+        "collection": "frontpage",
+        "products_count": 8,
+        "grid_image_size": "auto",
+        "grid_image_fit": "cover",
+        "heading": "",
+        "enable_highlight": false,
+        "higlight_style": "basic",
+        "outline_thickness": "1px",
+        "heading_size": "h5",
+        "seo_heading_tag": "h4",
+        "heading_space_desktop": 0,
+        "heading_space_mobile": 0,
+        "view_all_button_text": "View all",
+        "color_scheme": "primary",
+        "enable_gradiant": false,
+        "marker_color": "#000000",
+        "marker_text_color": "#000000",
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 40
+      }
+    },
     "rich_text_HtpVkU": {
       "type": "rich-text",
       "blocks": {
@@ -987,35 +1016,6 @@
         "enable_fixed": false,
         "top_space_desktop": 80,
         "bottom_space_desktop": 80,
-        "top_space_mobile": 40,
-        "bottom_space_mobile": 40
-      }
-    },
-    "featured_collection_itV4WH": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "section_visibility": "always",
-        "stacked_products": true,
-        "collection": "",
-        "products_count": 8,
-        "grid_image_size": "auto",
-        "grid_image_fit": "cover",
-        "heading": "Featured collection",
-        "enable_highlight": false,
-        "higlight_style": "basic",
-        "outline_thickness": "1px",
-        "heading_size": "h5",
-        "seo_heading_tag": "h4",
-        "heading_space_desktop": 0,
-        "heading_space_mobile": 0,
-        "view_all_button_text": "View all",
-        "color_scheme": "primary",
-        "enable_gradiant": false,
-        "marker_color": "#000000",
-        "marker_text_color": "#000000",
-        "top_space_desktop": 70,
-        "bottom_space_desktop": 70,
         "top_space_mobile": 40,
         "bottom_space_mobile": 40
       }
@@ -1425,8 +1425,8 @@
     "multi_image_with_text_aDDjbK",
     "overlapping_product_list_tfbFnA",
     "best_selling_categories_JHDGyD",
-    "rich_text_HtpVkU",
     "featured_collection_itV4WH",
+    "rich_text_HtpVkU",
     "marquee_text_3xKbeN",
     "video_hBpQQM",
     "b736ec94-8315-4e0a-bfe8-36db0e074724",
