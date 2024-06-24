@@ -435,6 +435,7 @@
           "type": "collection",
           "settings": {
             "collection": "yoga-mats",
+            "image": "shopify:\/\/shop_images\/Yoga-Mats-3.webp",
             "collection_heading": "",
             "collection_bg_color": ""
           }
