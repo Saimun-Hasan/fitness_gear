@@ -1,1 +1,46 @@
-{"sections":{"main":{"type":"main-list-collections","settings":{}}},"order":["main"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "banner_image": "shopify:\/\/shop_images\/fitnear_gear_banner.webp",
+        "heading": "Fitness Gear Essentials",
+        "heading_size": "h1",
+        "seo_heading_tag": "h2",
+        "heading_overlay": true,
+        "banner_height_desktop": "300px",
+        "banner_height_mobile": "200px",
+        "title_hover": "hover",
+        "title_alignment": "left",
+        "collections_per_page": 20,
+        "sort": "alphabetical",
+        "grid_image_size": "square",
+        "color_scheme": "primary",
+        "enable_gradiant": false,
+        "bgcolor": "#F8F3EB",
+        "bgcoloropacity": "#000000",
+        "textcolor": "#ffffff",
+        "overlay_opacity": 50,
+        "collection_overlay_color": "#000000",
+        "collection_overlay_opacity": 40,
+        "collection_overlay_text_color": "#FFFFFF",
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 20
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
