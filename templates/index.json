@@ -1093,7 +1093,7 @@
         "section_visibility": "always",
         "videourl": "shopify:\/\/files\/videos\/fitness_gear.webm",
         "video_style": "square",
-        "make_circle_style_fix": true,
+        "make_circle_style_fix": false,
         "heading": "Elevate Fitness",
         "seo_heading_tag": "h3",
         "font_family": "heading",
