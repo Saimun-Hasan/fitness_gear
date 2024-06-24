@@ -599,7 +599,7 @@
     "e35a4f88-7eed-47ae-b5ab-f515973c8a9a": {
       "type": "featured-collection",
       "custom_css": [
-        ".section-wrapper {background: #cbcbcb !important;}"
+        ".section-wrapper {background: #cbcbcb;}"
       ],
       "settings": {
         "section_visibility": "always",
