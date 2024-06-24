@@ -1195,6 +1195,69 @@
         "bottom_space_mobile": 40
       }
     },
+    "testimonials_BRPMBF": {
+      "type": "testimonials",
+      "blocks": {
+        "quote_nVUWgF": {
+          "type": "quote",
+          "settings": {
+            "author": "Author name here",
+            "breif": "Breif text here",
+            "show_rating": true,
+            "rating": 5,
+            "message": "Add client reviews & testimonials to showcase your store’s happy clients."
+          }
+        },
+        "quote_ihVjrL": {
+          "type": "quote",
+          "settings": {
+            "author": "Author name here",
+            "breif": "Breif text here",
+            "show_rating": true,
+            "rating": 5,
+            "message": "Add client reviews & testimonials to showcase your store’s happy clients."
+          }
+        },
+        "quote_XVTWiX": {
+          "type": "quote",
+          "settings": {
+            "author": "Author name here",
+            "breif": "Breif text here",
+            "show_rating": true,
+            "rating": 5,
+            "message": "Add client reviews & testimonials to showcase your store’s happy clients."
+          }
+        }
+      },
+      "block_order": [
+        "quote_nVUWgF",
+        "quote_ihVjrL",
+        "quote_XVTWiX"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "heading": "SUCCESS STORIES",
+        "enable_highlight": false,
+        "higlight_style": "basic",
+        "outline_thickness": "1px",
+        "heading_size": "h2",
+        "seo_heading_tag": "h3",
+        "heading_text_alignment": "left",
+        "heading_space_desktop": 0,
+        "heading_space_mobile": 0,
+        "quote_count": "one",
+        "stacked_carousel": false,
+        "text_alignment": "left",
+        "color_scheme": "quaternary",
+        "enable_gradiant": false,
+        "marker_color": "#000000",
+        "marker_text_color": "#000000",
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 40
+      }
+    },
     "821febdb-d6fd-4c3e-b63a-7ce6d199e794": {
       "type": "collage-with-text",
       "blocks": {
@@ -1229,6 +1292,7 @@
         "template--18467116384578__821febdb-d6fd-4c3e-b63a-7ce6d199e794-1679987884197e4ac9-0",
         "template--18467116384578__821febdb-d6fd-4c3e-b63a-7ce6d199e794-1679987884197e4ac9-1"
       ],
+      "disabled": true,
       "settings": {
         "section_visibility": "always",
         "heading": "Collage with text",
@@ -1365,6 +1429,7 @@
     "video_hBpQQM",
     "b736ec94-8315-4e0a-bfe8-36db0e074724",
     "featured_products_RVQb6y",
+    "testimonials_BRPMBF",
     "821febdb-d6fd-4c3e-b63a-7ce6d199e794",
     "4d96c2ef-0df8-433f-8bf9-6f1ae44287b9",
     "7f0f4629-5ea0-45b0-a8bb-ffccb12e9c8e"
