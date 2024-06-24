@@ -427,7 +427,7 @@
           "settings": {
             "collection": "posture-correctors",
             "image": "shopify:\/\/shop_images\/ac98ccaf49f320d3758f69f7b370cfe1.webp",
-            "collection_heading": "",
+            "collection_heading": "Posture Enhancers",
             "collection_bg_color": ""
           }
         },
@@ -436,7 +436,7 @@
           "settings": {
             "collection": "yoga-mats",
             "image": "shopify:\/\/shop_images\/Yoga-Mats-3.webp",
-            "collection_heading": "",
+            "collection_heading": "Yoga Mats",
             "collection_bg_color": ""
           }
         },
@@ -444,7 +444,7 @@
           "type": "collection",
           "settings": {
             "collection": "fitness-trackers",
-            "collection_heading": "",
+            "collection_heading": "Fitness Trackers",
             "collection_bg_color": ""
           }
         }
@@ -601,8 +601,8 @@
       "settings": {
         "section_visibility": "always",
         "stacked_products": false,
-        "collection": "",
-        "products_count": 6,
+        "collection": "yoga-mats",
+        "products_count": 4,
         "grid_image_size": "auto",
         "grid_image_fit": "cover",
         "heading": "BEST SELLERS",
@@ -611,8 +611,8 @@
         "outline_thickness": "1px",
         "heading_size": "h2",
         "seo_heading_tag": "h4",
-        "heading_space_desktop": 0,
-        "heading_space_mobile": 0,
+        "heading_space_desktop": 20,
+        "heading_space_mobile": 20,
         "view_all_button_text": "View all",
         "color_scheme": "primary",
         "enable_gradiant": false,
