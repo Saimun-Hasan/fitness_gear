@@ -155,7 +155,7 @@
         "interval": 3,
         "show_playpause_btn": false,
         "font_family": "heading",
-        "desktop_font": 80,
+        "desktop_font": 60,
         "mobile_font": 30,
         "desktop_height": "100vh",
         "mobile_height": "100vh",
@@ -305,7 +305,7 @@
         "template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-0"
       ],
       "custom_css": [
-        "@media only screen and (max-width: 767px) {#rich-text__heading-template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-0 {font-size: 33px; }}"
+        "@media only screen and (max-width: 767px) {#rich-text__heading-template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-0 {font-size: 30px; }}"
       ],
       "settings": {
         "section_visibility": "always",
