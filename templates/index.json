@@ -149,7 +149,7 @@
         "slider_animation": true,
         "enable_compact_view": false,
         "content_below_image": false,
-        "navigation_style": "dots",
+        "navigation_style": "arrows",
         "tab_content_type": "heading",
         "rotate": true,
         "interval": 5,
