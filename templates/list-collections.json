@@ -23,7 +23,7 @@
         "title_alignment": "left",
         "collections_per_page": 20,
         "sort": "alphabetical",
-        "grid_image_size": "square",
+        "grid_image_size": "portrait",
         "color_scheme": "primary",
         "enable_gradiant": false,
         "bgcolor": "#f8f3eb",
