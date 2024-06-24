@@ -1091,7 +1091,7 @@
       "type": "video",
       "settings": {
         "section_visibility": "large",
-        "videourl": "shopify:\/\/files\/videos\/fitness_gear.webm",
+        "videourl": "shopify:\/\/files\/videos\/desktop_video.mp4",
         "video_style": "square",
         "make_circle_style_fix": false,
         "heading": "Elevate Fitness",
