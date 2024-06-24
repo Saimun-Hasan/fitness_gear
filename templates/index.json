@@ -461,6 +461,9 @@
         "collection_nPtpew",
         "collection_MFNqMy"
       ],
+      "custom_css": [
+        "@media only screen and (max-width: 1024px) {.featured-collection-list__head {color: #8BC34A; text-align: center; background: #000000c7; padding: 8px; }}"
+      ],
       "settings": {
         "section_visibility": "always",
         "carousel_style": "carousel-1",
