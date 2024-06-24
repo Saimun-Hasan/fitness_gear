@@ -444,6 +444,7 @@
           "type": "collection",
           "settings": {
             "collection": "fitness-trackers",
+            "image": "shopify:\/\/shop_images\/fitness_gear_fitness_tracker_2.webp",
             "collection_heading": "Fitness Trackers",
             "collection_bg_color": ""
           }
