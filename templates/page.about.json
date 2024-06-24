@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "banner": "shopify:\/\/shop_images\/dumbbells-foreground-gym-environment.jpg",
         "banner_height_desktop": "550px",
@@ -37,8 +38,8 @@
             "outline_thickness": "1px",
             "heading_space_desktop": 20,
             "heading_space_mobile": 0,
-            "animate_color1": "#94A5FF",
-            "animate_color2": "#FF3939",
+            "animate_color1": "#94a5ff",
+            "animate_color2": "#ff3939",
             "marker_color": "#000000",
             "marker_text_color": "#000000"
           }
