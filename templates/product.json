@@ -54,6 +54,7 @@
         },
         "16134641-e2f7-4fa3-b208-a807a2190c55": {
           "type": "social-icons",
+          "disabled": true,
           "settings": {
           }
         }
@@ -80,7 +81,7 @@
         "thumbs_position": "left",
         "content_style": "accordion",
         "show_description": true,
-        "description_heading": "Description",
+        "description_heading": "Product Details",
         "custom_heading_1": "",
         "custom_description_1": "",
         "custom_heading_2": "",
@@ -93,9 +94,9 @@
         "hide_quick_order_sold_items": false,
         "color_scheme": "primary",
         "enable_gradiant": false,
-        "top_space_desktop": 0,
+        "top_space_desktop": 100,
         "bottom_space_desktop": 0,
-        "top_space_mobile": 0,
+        "top_space_mobile": 50,
         "bottom_space_mobile": 20
       }
     },
@@ -105,18 +106,18 @@
         "c631b830-0a61-4498-b66f-251f968901dd": {
           "type": "text",
           "settings": {
-            "text": "MARQUEE TEXT HERE",
+            "text": "Fitness Gear + Free Shipping",
             "outline_thickness": "1px",
             "enable_highlight": false,
             "enable_text_shadow": false,
-            "text_gap": 15,
+            "text_gap": 25,
             "scrolling_speed": 15,
             "scrolling_speed_mobile": 15,
             "font_family": "heading",
-            "desktop_font": 112,
+            "desktop_font": 100,
             "mobile_font": 40,
             "bgcolor": "",
-            "color": "",
+            "color": "#848383",
             "highlight_color": "",
             "shadow_color": "",
             "custom_icon": "",
@@ -131,8 +132,8 @@
         "c631b830-0a61-4498-b66f-251f968901dd"
       ],
       "settings": {
-        "enable_autoplay": false,
-        "show_marquees_in_one_row": false,
+        "enable_autoplay": true,
+        "show_marquees_in_one_row": true,
         "direction": "rtl",
         "text_angle": 0,
         "section_visibility": "always",
@@ -140,11 +141,70 @@
         "min_height_mobile": 200,
         "scrolling_speed": 15,
         "scrolling_speed_mobile": 15,
-        "bgcolor": "",
+        "bgcolor": "#e5e4e4",
         "background_effect": false,
         "effect_color": "radial-gradient(circle, rgba(255, 205, 193, 1) 0%, rgb(254 224 224 \/ 0%) 100%)",
         "top_space_desktop": 70,
         "bottom_space_desktop": 70,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 40
+      }
+    },
+    "collection_carousel_gjbKU8": {
+      "type": "collection-carousel",
+      "blocks": {
+        "collection_hkETgA": {
+          "type": "collection",
+          "settings": {
+            "collection": "posture-correctors",
+            "image": "shopify:\/\/shop_images\/ac98ccaf49f320d3758f69f7b370cfe1.webp",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        },
+        "collection_XW7iCK": {
+          "type": "collection",
+          "settings": {
+            "collection": "jump-ropes",
+            "image": "shopify:\/\/shop_images\/jump_ropes_1.jpg",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        },
+        "collection_qk7DXK": {
+          "type": "collection",
+          "settings": {
+            "collection": "resistance-bands",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_hkETgA",
+        "collection_XW7iCK",
+        "collection_qk7DXK"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "carousel_style": "carousel-1",
+        "heading": "Workout Wardrobe",
+        "enable_highlight": false,
+        "higlight_style": "basic",
+        "outline_thickness": "1px",
+        "heading_size": "h2",
+        "seo_heading_tag": "h3",
+        "view_all_button_text": "View all",
+        "btn_link": "shopify:\/\/collections\/all",
+        "radius_enable": false,
+        "circular_border": false,
+        "title_color": "#000000",
+        "title_alignment": "left",
+        "color_scheme": "tertiary",
+        "marker_color": "#000000",
+        "marker_text_color": "#000000",
+        "background_gradient": "",
+        "bottom_gradient": "",
         "top_space_mobile": 40,
         "bottom_space_mobile": 40
       }
@@ -155,13 +215,13 @@
         "template--18467116613954__0e9b6e9e-8679-4450-a68e-fa13da34613f-1680074369a4865bee-0": {
           "type": "heading",
           "settings": {
-            "heading": "Heading here"
+            "heading": "Workouts Customized for Your Goals and Daily Routine"
           }
         },
         "template--18467116613954__0e9b6e9e-8679-4450-a68e-fa13da34613f-1680074369a4865bee-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Use this section to welcome customers to your store, say a bit about your brand, or share news and seasonal promotions.<\/p>"
+            "text": "<p>Achieve your fitness aspirations with workouts specifically designed to align with your personal goals and lifestyle. Whether you're aiming to build strength, improve flexibility, or enhance overall wellness, our customized fitness plans are crafted to fit seamlessly into your daily routine. <\/p>"
           }
         }
       },
@@ -192,7 +252,7 @@
         "effect_color": "radial-gradient(circle, rgba(255, 205, 193, 1) 0%, rgb(254 224 224 \/ 0%) 100%)",
         "border_color": "#dddddd",
         "content_background": "",
-        "color_scheme": "secondary",
+        "color_scheme": "primary",
         "marker_color": "#000000",
         "marker_text_color": "#000000",
         "top_space_desktop": 70,
@@ -204,18 +264,18 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "Recommended Products",
+        "heading": "Related Fitness Gear",
         "enable_highlight": false,
         "higlight_style": "basic",
         "outline_thickness": "1px",
-        "heading_size": "h5",
+        "heading_size": "h2",
         "seo_heading_tag": "h2",
-        "heading_space_desktop": 0,
-        "heading_space_mobile": 0,
+        "heading_space_desktop": 10,
+        "heading_space_mobile": 10,
         "products_count": 8,
         "grid_image_size": "auto",
         "grid_image_fit": "cover",
-        "color_scheme": "primary",
+        "color_scheme": "tertiary",
         "enable_gradiant": false,
         "marker_color": "#000000",
         "marker_text_color": "#000000",
@@ -229,6 +289,7 @@
   "order": [
     "main",
     "14c81493-9beb-41e6-81bc-81bed4a11a83",
+    "collection_carousel_gjbKU8",
     "0e9b6e9e-8679-4450-a68e-fa13da34613f",
     "related-products"
   ]
