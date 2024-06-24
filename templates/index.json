@@ -303,7 +303,7 @@
       ],
       "settings": {
         "section_visibility": "always",
-        "background_image": "shopify:\/\/shop_images\/stroke_banner_6bb3bd6a-dfec-43d3-b955-3b320321f0b6.webp",
+        "background_image": "shopify:\/\/shop_images\/stroke_banner_13727c29-1415-4a33-b91a-a3db11ec1444.webp",
         "content_width": "large",
         "text_alignment": "center",
         "color_scheme": "secondary",
@@ -947,8 +947,8 @@
             "outline_thickness": "1px",
             "heading_space_desktop": 20,
             "heading_space_mobile": 0,
-            "animate_color1": "#94A5FF",
-            "animate_color2": "#FF3939",
+            "animate_color1": "#94a5ff",
+            "animate_color2": "#ff3939",
             "marker_color": "#000000",
             "marker_text_color": "#000000"
           }
