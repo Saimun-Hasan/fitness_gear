@@ -771,9 +771,10 @@
           "settings": {
             "product_list": [
               "fitness-gear-premium-foam-roller",
-              "fitness-gear-resistance-bands",
               "fitness-gear-stability-exercise-ball",
-              "yoga-mat"
+              "yoga-mat",
+              "fitness-gear-advanced-fitness-tracker",
+              "fitness-gear-high-performance-jump-rope"
             ],
             "image": "shopify:\/\/shop_images\/fitness_gear_collection_banner.webp",
             "show_video": false,
@@ -872,7 +873,7 @@
           "type": "collection",
           "settings": {
             "collection": "jump-ropes",
-            "image": "shopify:\/\/shop_images\/jump_ropes_1.jpg",
+            "image": "shopify:\/\/shop_images\/fitness_gear_jump_ropes_2.webp",
             "collection_heading": "",
             "collection_bg_color": ""
           }
