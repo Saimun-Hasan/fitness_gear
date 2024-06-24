@@ -48,15 +48,15 @@
             "m_heading_animate": "#0b0e0d",
             "m_shadow_color": "",
             "m_desc_color": "#ffffff",
-            "m_btn_bg_color": "#0b0e0d",
-            "m_btn_text_color": "#ffffff",
-            "m_btn_border_color": "#b3b3b3"
+            "m_btn_bg_color": "#e0fd31",
+            "m_btn_text_color": "#000000",
+            "m_btn_border_color": "#e0fd31"
           }
         },
         "slide_Q7atnH": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/fitnear_gear_banner_3.webp",
+            "image_desktop": "shopify:\/\/shop_images\/fitnear_gear_banner_alt_2.webp",
             "heading": "Find Your Balance and Flexibility",
             "seo_heading_tag": "h1",
             "enable_highlight": false,
@@ -79,25 +79,25 @@
             "heading_animate": "#b3b3b3",
             "shadow_color_desktop": "",
             "desc_color": "#ffffff",
-            "btn_bg_color": "#0b0e0d",
-            "btn_text_color": "#ffffff",
-            "btn_border_color": "#5c5b5b",
-            "btn_hover_bg_color": "#0b0e0d",
-            "btn_hover_text_color": "#ffffff",
-            "btn_hover_border_color": "#5c5b5b",
+            "btn_bg_color": "#e0fd31",
+            "btn_text_color": "#000000",
+            "btn_border_color": "#e0fd31",
+            "btn_hover_bg_color": "#ffffff",
+            "btn_hover_text_color": "#000000",
+            "btn_hover_border_color": "#ffffff",
             "m_heading_color": "#ffffff",
             "m_heading_animate": "#0b0e0d",
             "m_shadow_color": "",
             "m_desc_color": "#ffffff",
-            "m_btn_bg_color": "#0b0e0d",
-            "m_btn_text_color": "#ffffff",
-            "m_btn_border_color": "#b3b3b3"
+            "m_btn_bg_color": "#e0fd31",
+            "m_btn_text_color": "#000000",
+            "m_btn_border_color": "#e0fd31"
           }
         },
         "slide_UbJF96": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/fitnear_gear_banner.webp",
+            "image_desktop": "shopify:\/\/shop_images\/fitnear_gear_banner_alt_3.webp",
             "heading": "Track Your Progress",
             "seo_heading_tag": "h1",
             "enable_highlight": false,
@@ -109,30 +109,30 @@
             "btn_text": "EXPLORE PRODUCTS",
             "btn_link": "shopify:\/\/collections\/all",
             "size": "med",
-            "content_width": "large",
-            "desktop_content_position": "d-center",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
             "mobile_content_position": "m-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 40,
+            "overlay_opacity": 25,
             "bg_color": "#000000",
             "bg_gradient": "",
             "heading_color": "#ffffff",
             "heading_animate": "#b3b3b3",
             "shadow_color_desktop": "",
             "desc_color": "#ffffff",
-            "btn_bg_color": "#0b0e0d",
-            "btn_text_color": "#ffffff",
-            "btn_border_color": "#5c5b5b",
-            "btn_hover_bg_color": "#0b0e0d",
-            "btn_hover_text_color": "#ffffff",
-            "btn_hover_border_color": "#5c5b5b",
+            "btn_bg_color": "#e0fd31",
+            "btn_text_color": "#000000",
+            "btn_border_color": "#e0fd31",
+            "btn_hover_bg_color": "#ffffff",
+            "btn_hover_text_color": "#000000",
+            "btn_hover_border_color": "#ffffff",
             "m_heading_color": "#ffffff",
             "m_heading_animate": "#0b0e0d",
             "m_shadow_color": "",
             "m_desc_color": "#ffffff",
-            "m_btn_bg_color": "#0b0e0d",
-            "m_btn_text_color": "#ffffff",
-            "m_btn_border_color": "#b3b3b3"
+            "m_btn_bg_color": "#e0fd31",
+            "m_btn_text_color": "#000000",
+            "m_btn_border_color": "#e0fd31"
           }
         }
       },
@@ -283,7 +283,7 @@
         "template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-0": {
           "type": "heading",
           "settings": {
-            "heading": "Elevate Your Fitness Routine. Discounts on Premium Gear Today",
+            "heading": "Celebrate and Save on Fitness Gear!",
             "seo_heading_tag": "h2",
             "higlight_style": "basic",
             "size": "h1",
@@ -291,8 +291,8 @@
             "outline_thickness": "1px",
             "heading_space_desktop": 20,
             "heading_space_mobile": 0,
-            "animate_color1": "#94a5ff",
-            "animate_color2": "#ff3939",
+            "animate_color1": "#e0fd31",
+            "animate_color2": "#f74c25",
             "marker_color": "#000000",
             "marker_text_color": "#000000"
           }
@@ -303,12 +303,11 @@
       ],
       "settings": {
         "section_visibility": "always",
-        "background_image": "shopify:\/\/shop_images\/fitness_gear_banner_4.webp",
         "content_width": "large",
         "text_alignment": "center",
-        "color_scheme": "quaternary",
+        "color_scheme": "primary",
         "enable_gradiant": false,
-        "enable_fixed": true,
+        "enable_fixed": false,
         "top_space_desktop": 70,
         "bottom_space_desktop": 70,
         "top_space_mobile": 40,
@@ -418,6 +417,81 @@
         "bottom_space_mobile": 0
       }
     },
+    "collection_carousel_eKmtct": {
+      "type": "collection-carousel",
+      "blocks": {
+        "collection_rYykef": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        },
+        "collection_nPtpew": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        },
+        "collection_MFNqMy": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        },
+        "collection_EwXiyp": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        },
+        "collection_8FyKbP": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_rYykef",
+        "collection_nPtpew",
+        "collection_MFNqMy",
+        "collection_EwXiyp",
+        "collection_8FyKbP"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "carousel_style": "carousel-1",
+        "heading": "Collection carousel",
+        "enable_highlight": false,
+        "higlight_style": "basic",
+        "outline_thickness": "1px",
+        "heading_size": "h5",
+        "seo_heading_tag": "h3",
+        "view_all_button_text": "View all",
+        "btn_link": "shopify:\/\/collections\/all",
+        "radius_enable": false,
+        "circular_border": false,
+        "title_color": "#000000",
+        "title_alignment": "left",
+        "color_scheme": "primary",
+        "marker_color": "#000000",
+        "marker_text_color": "#000000",
+        "background_gradient": "",
+        "bottom_gradient": "",
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 40
+      }
+    },
     "best_selling_categories_ByxKg3": {
       "type": "best-selling-categories",
       "blocks": {
@@ -482,40 +556,24 @@
         "template--18467116384578__00d317c9-b1b5-4ff4-80bb-eec7126176e0-16799875519f97ee82-0": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "collection_heading": "",
+            "collection": "posture-correctors",
+            "collection_heading": "Posture Enhancers",
             "collection_bg_color": ""
           }
         },
         "template--18467116384578__00d317c9-b1b5-4ff4-80bb-eec7126176e0-16799875519f97ee82-1": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "collection_heading": "",
+            "collection": "yoga-mats",
+            "collection_heading": "Yoga Mats",
             "collection_bg_color": ""
           }
         },
         "template--18467116384578__00d317c9-b1b5-4ff4-80bb-eec7126176e0-16799875519f97ee82-2": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "collection_heading": "",
-            "collection_bg_color": ""
-          }
-        },
-        "f2ca7a51-6266-4cf8-bb6b-0aad1b184b33": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "collection_heading": "",
-            "collection_bg_color": ""
-          }
-        },
-        "07568442-00e2-4a98-aecd-ddd932a8c14d": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "collection_heading": "",
+            "collection": "fitness-trackers",
+            "collection_heading": "Fitness Trackers",
             "collection_bg_color": ""
           }
         }
@@ -523,19 +581,17 @@
       "block_order": [
         "template--18467116384578__00d317c9-b1b5-4ff4-80bb-eec7126176e0-16799875519f97ee82-0",
         "template--18467116384578__00d317c9-b1b5-4ff4-80bb-eec7126176e0-16799875519f97ee82-1",
-        "template--18467116384578__00d317c9-b1b5-4ff4-80bb-eec7126176e0-16799875519f97ee82-2",
-        "f2ca7a51-6266-4cf8-bb6b-0aad1b184b33",
-        "07568442-00e2-4a98-aecd-ddd932a8c14d"
+        "template--18467116384578__00d317c9-b1b5-4ff4-80bb-eec7126176e0-16799875519f97ee82-2"
       ],
       "disabled": true,
       "settings": {
         "section_visibility": "always",
         "carousel_style": "carousel-1",
-        "heading": "Collection carousel",
+        "heading": "Best Selling",
         "enable_highlight": false,
         "higlight_style": "basic",
         "outline_thickness": "1px",
-        "heading_size": "h5",
+        "heading_size": "h2",
         "seo_heading_tag": "h3",
         "view_all_button_text": "View all",
         "btn_link": "shopify:\/\/collections\/all",
@@ -1170,6 +1226,7 @@
     "a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82",
     "6ae2de99-dd84-4f12-a1a6-e82fe9f56fea",
     "aff6f7eb-3bb8-4ba0-ab9a-d8e12207bf74",
+    "collection_carousel_eKmtct",
     "best_selling_categories_ByxKg3",
     "00d317c9-b1b5-4ff4-80bb-eec7126176e0",
     "e35a4f88-7eed-47ae-b5ab-f515973c8a9a",
