@@ -961,6 +961,7 @@
         "collection_x9DWkD"
       ],
       "custom_css": [
+        ".background-color-wrapper{background: linear-gradient( 105deg, rgba(106, 173, 40, 1), rgba(249, 253, 60, 1) 100% ) !important}",
         ".best-selling-category-wrapper {background: linear-gradient( 105deg, rgba(106, 173, 40, 1), rgba(249, 253, 60, 1) 100% ) !important;}",
         ".flickity-viewport {overflow: visible;}"
       ],
