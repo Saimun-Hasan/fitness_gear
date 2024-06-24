@@ -230,7 +230,7 @@
         ],
         "settings": {
           "enable_dock": true,
-          "color_scheme": "secondary",
+          "color_scheme": "quaternary",
           "enable_gradiant": false
         }
       }
