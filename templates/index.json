@@ -1090,10 +1090,30 @@
     "video_hBpQQM": {
       "type": "video",
       "settings": {
-        "section_visibility": "always",
+        "section_visibility": "large",
         "videourl": "shopify:\/\/files\/videos\/fitness_gear.webm",
         "video_style": "square",
         "make_circle_style_fix": false,
+        "heading": "Elevate Fitness",
+        "seo_heading_tag": "h3",
+        "font_family": "heading",
+        "style": "shadow",
+        "outline_thickness": "1px",
+        "color_scheme": "secondary",
+        "enable_gradiant": false,
+        "text_shadow_color": "#565656",
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 0
+      }
+    },
+    "video_qfqBww": {
+      "type": "video",
+      "settings": {
+        "section_visibility": "small",
+        "video_style": "square",
+        "make_circle_style_fix": true,
         "heading": "Elevate Fitness",
         "seo_heading_tag": "h3",
         "font_family": "heading",
@@ -1445,6 +1465,7 @@
     "rich_text_HtpVkU",
     "marquee_text_3xKbeN",
     "video_hBpQQM",
+    "video_qfqBww",
     "b736ec94-8315-4e0a-bfe8-36db0e074724",
     "featured_products_RVQb6y",
     "testimonials_BRPMBF",
