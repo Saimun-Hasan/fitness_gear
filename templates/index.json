@@ -907,7 +907,7 @@
         "collection_x9DWkD"
       ],
       "custom_css": [
-        ".best-selling-category-wrapper {background: linear-gradient( 105deg, rgba(106, 173, 40, 1), rgba(249, 253, 60, 1) 100% );}"
+        ".best-selling-category-wrapper {background: linear-gradient( 105deg, rgba(106, 173, 40, 1), rgba(249, 253, 60, 1) 100% ) !important;}"
       ],
       "settings": {
         "section_visibility": "always",
