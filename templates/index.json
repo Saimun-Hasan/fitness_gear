@@ -862,6 +862,7 @@
           "type": "collection",
           "settings": {
             "collection": "jump-ropes",
+            "image": "shopify:\/\/shop_images\/jump_ropes_1.jpg",
             "collection_heading": "",
             "collection_bg_color": ""
           }
@@ -923,8 +924,8 @@
         "heading_size": "h2",
         "seo_heading_tag": "h3",
         "text_alignment": "left",
-        "block_heading_size": "h3",
-        "color_scheme": "secondary",
+        "block_heading_size": "h4",
+        "color_scheme": "quaternary",
         "enable_gradiant": false,
         "marker_color": "#f74c25",
         "marker_text_color": "#deff12",
