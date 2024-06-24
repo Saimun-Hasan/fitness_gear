@@ -18,7 +18,7 @@
         "seo_heading_tag": "h2",
         "bannerbgcolor": "#222222",
         "bgcoloropacity": "#000000",
-        "textcolor": "#807E7E",
+        "textcolor": "#807e7e",
         "overlay_opacity": 50
       }
     },
@@ -48,6 +48,7 @@
     },
     "6dd189af-1539-4ac6-a16c-e0d4e1f02303": {
       "type": "map",
+      "disabled": true,
       "settings": {
         "social_heading": "Map",
         "heading_size": "h5",
