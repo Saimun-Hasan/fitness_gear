@@ -1147,10 +1147,10 @@
       "settings": {
         "section_visibility": "always",
         "enable_animation": false,
-        "product": "yoga-mat",
+        "product": "fitness-gear-posture-corrector-brace",
         "enable_fullwidth": false,
         "enable_background_blur": true,
-        "heading": "Fitness Gear Premium Yoga Mat",
+        "heading": "Fitness Gear Premium Posture Corrector",
         "enable_highlight": false,
         "outline_thickness": "1px",
         "heading_size": "h2",
@@ -1183,7 +1183,7 @@
         "products": [
 
         ],
-        "collection_image": "shopify:\/\/shop_images\/ac98ccaf49f320d3758f69f7b370cfe1.webp",
+        "collection_image": "shopify:\/\/shop_images\/fitness_gear_posture_1.webp",
         "enable_border": true,
         "products_count": 6,
         "collection_card_width": "6",
