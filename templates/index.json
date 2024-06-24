@@ -72,7 +72,7 @@
             "size": "med",
             "content_width": "medium",
             "desktop_content_position": "d-center-left",
-            "mobile_content_position": "m-center",
+            "mobile_content_position": "m-bottom-center",
             "overlay_color": "#000000",
             "overlay_opacity": 25,
             "bg_color": "#000000",
@@ -100,7 +100,7 @@
           "type": "slide",
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/fitnear_gear_banner_alt_3.webp",
-            "image_mobile": "shopify:\/\/shop_images\/fitnear_gear_banner_alt_3.webp",
+            "image_mobile": "shopify:\/\/shop_images\/fitnear_gear_banner_mobile_slide_3.webp",
             "heading": "Track Your Progress",
             "seo_heading_tag": "h1",
             "enable_highlight": false,
