@@ -28,7 +28,7 @@
             "btn_link": "shopify:\/\/collections\/all",
             "size": "med",
             "content_width": "medium",
-            "desktop_content_position": "d-top-left",
+            "desktop_content_position": "d-center-left",
             "mobile_content_position": "m-center",
             "overlay_color": "#000000",
             "overlay_opacity": 25,
