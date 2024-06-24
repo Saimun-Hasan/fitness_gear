@@ -35,60 +35,35 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "98b37314-e6de-4346-8508-4fc1f4e86195": {
-          "type": "link_list",
-          "settings": {
-            "heading": "",
-            "heading_link": "",
-            "menu": "footer"
-          }
-        },
         "e1769a46-68e3-4fea-82f0-7744bb8b58d8": {
           "type": "link_list",
           "settings": {
             "heading": "Quick links",
             "heading_link": "",
-            "menu": "footer"
+            "menu": "quick-links"
           }
         },
         "717fe371-952b-4e47-ab36-6080ced9aaa4": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Support",
             "heading_link": "",
-            "menu": "footer"
+            "menu": "support"
           }
         },
         "ba1f1831-185d-4c85-936f-54a46dfeb131": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Top Selling",
             "heading_link": "",
-            "menu": "footer"
-          }
-        },
-        "1d1178ca-7ab4-4a4e-8a1b-677318a22031": {
-          "type": "social_links",
-          "settings": {
-            "heading": "Follow me"
-          }
-        },
-        "123ca26c-013c-4878-b937-f72065396374": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "heading_link": "",
-            "menu": "footer"
+            "menu": "top-selling"
           }
         }
       },
       "block_order": [
-        "98b37314-e6de-4346-8508-4fc1f4e86195",
         "e1769a46-68e3-4fea-82f0-7744bb8b58d8",
         "717fe371-952b-4e47-ab36-6080ced9aaa4",
-        "ba1f1831-185d-4c85-936f-54a46dfeb131",
-        "1d1178ca-7ab4-4a4e-8a1b-677318a22031",
-        "123ca26c-013c-4878-b937-f72065396374"
+        "ba1f1831-185d-4c85-936f-54a46dfeb131"
       ],
       "settings": {
         "enable_stacked_view": true,
