@@ -152,7 +152,7 @@
         "navigation_style": "arrows",
         "tab_content_type": "heading",
         "rotate": true,
-        "interval": 5,
+        "interval": 3,
         "show_playpause_btn": false,
         "font_family": "heading",
         "desktop_font": 80,
