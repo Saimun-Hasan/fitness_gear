@@ -16,6 +16,7 @@
           "type": "slide",
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/fitnear_gear_banner_alt_1.webp",
+            "image_mobile": "shopify:\/\/shop_images\/fitnear_gear_banner_alt_1.webp",
             "heading": "Transform Your Fitness Journey",
             "seo_heading_tag": "h1",
             "enable_highlight": false,
@@ -153,9 +154,9 @@
         "show_playpause_btn": false,
         "font_family": "heading",
         "desktop_font": 80,
-        "mobile_font": 40,
+        "mobile_font": 30,
         "desktop_height": "100vh",
-        "mobile_height": "550px",
+        "mobile_height": "100vh",
         "bg_color": "#000000",
         "bg_gradient": ""
       }
