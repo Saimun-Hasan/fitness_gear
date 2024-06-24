@@ -1135,7 +1135,7 @@
         "media_height_desktop": "700px",
         "media_height_mobile": "500px",
         "media_fit": "cover",
-        "color_scheme": "secondary",
+        "color_scheme": "primary",
         "enable_gradiant": false,
         "inner_color_scheme": "secondary",
         "overlay_color": "#000000",
