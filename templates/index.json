@@ -920,6 +920,7 @@
           "type": "collection",
           "settings": {
             "collection": "resistance-bands",
+            "image": "shopify:\/\/shop_images\/fitness_gear_resistance_bands_2.webp",
             "collection_heading": "",
             "collection_bg_color": ""
           }
@@ -928,6 +929,7 @@
           "type": "collection",
           "settings": {
             "collection": "dumbbells-kettlebells",
+            "image": "shopify:\/\/shop_images\/fitness_gear_dumbbells_2.webp",
             "collection_heading": "",
             "collection_bg_color": ""
           }
@@ -936,6 +938,7 @@
           "type": "collection",
           "settings": {
             "collection": "foam-rollers",
+            "image": "shopify:\/\/shop_images\/fitness_gear_foam_rollers_2_webp.webp",
             "collection_heading": "",
             "collection_bg_color": ""
           }
@@ -944,6 +947,7 @@
           "type": "collection",
           "settings": {
             "collection": "balance-boards",
+            "image": "shopify:\/\/shop_images\/fitness_gear_balance_boards_2.webp",
             "collection_heading": "",
             "collection_bg_color": ""
           }
