@@ -611,7 +611,7 @@
         "heading_space_desktop": 0,
         "heading_space_mobile": 0,
         "view_all_button_text": "View all",
-        "color_scheme": "tertiary",
+        "color_scheme": "primary",
         "enable_gradiant": false,
         "marker_color": "#000000",
         "marker_text_color": "#000000",
@@ -851,11 +851,88 @@
       "settings": {
         "section_visibility": "always",
         "grid_image_size": "auto",
-        "color_scheme": "secondary"
+        "color_scheme": "primary"
+      }
+    },
+    "best_selling_categories_JHDGyD": {
+      "type": "best-selling-categories",
+      "blocks": {
+        "collection_M9aLkr": {
+          "type": "collection",
+          "settings": {
+            "collection": "jump-ropes",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        },
+        "collection_xnQ7zG": {
+          "type": "collection",
+          "settings": {
+            "collection": "resistance-bands",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        },
+        "collection_8waTH8": {
+          "type": "collection",
+          "settings": {
+            "collection": "dumbbells-kettlebells",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        },
+        "collection_z4RrNX": {
+          "type": "collection",
+          "settings": {
+            "collection": "foam-rollers",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        },
+        "collection_x9DWkD": {
+          "type": "collection",
+          "settings": {
+            "collection": "balance-boards",
+            "collection_heading": "",
+            "collection_bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_M9aLkr",
+        "collection_xnQ7zG",
+        "collection_8waTH8",
+        "collection_z4RrNX",
+        "collection_x9DWkD"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "categories_style": "category-1",
+        "onscroll_background": "circle",
+        "grid_image_size": "auto",
+        "grid_image_fit": "cover",
+        "enable_image_bg": false,
+        "heading": "Fitness Essentials",
+        "enable_highlight": false,
+        "higlight_style": "basic",
+        "outline_thickness": "1px",
+        "heading_size": "h2",
+        "seo_heading_tag": "h3",
+        "text_alignment": "left",
+        "block_heading_size": "h3",
+        "color_scheme": "secondary",
+        "enable_gradiant": false,
+        "marker_color": "#f74c25",
+        "marker_text_color": "#deff12",
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 40
       }
     },
     "featured_collection_itV4WH": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "section_visibility": "always",
         "stacked_products": true,
@@ -872,7 +949,7 @@
         "heading_space_desktop": 0,
         "heading_space_mobile": 0,
         "view_all_button_text": "View all",
-        "color_scheme": "secondary",
+        "color_scheme": "primary",
         "enable_gradiant": false,
         "marker_color": "#000000",
         "marker_text_color": "#000000",
@@ -1219,6 +1296,7 @@
     "inline_menus_3TRRiX",
     "multi_image_with_text_aDDjbK",
     "overlapping_product_list_tfbFnA",
+    "best_selling_categories_JHDGyD",
     "featured_collection_itV4WH",
     "marquee_text_3xKbeN",
     "b736ec94-8315-4e0a-bfe8-36db0e074724",
