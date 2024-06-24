@@ -163,7 +163,7 @@
     "round_button_radius": "small",
     "button_style": "style2",
     "enable_animations": true,
-    "pass_through_product_images": true,
+    "pass_through_product_images": false,
     "show_variant_image": true,
     "color_swatches_style": "tiles",
     "option_style": "swatch",
