@@ -12,7 +12,8 @@
     "main-collection": {
       "type": "main-collection",
       "settings": {
-        "collection_image": false,
+        "collection_image": true,
+        "banner_image": "shopify:\/\/shop_images\/Yoga-Mats-1.webp",
         "banner_height_desktop": "300px",
         "banner_height_mobile": "200px",
         "heading_size": "h2",
@@ -30,8 +31,8 @@
         "color_scheme": "primary",
         "enable_gradiant": false,
         "bannerbgcolor": "#202020",
-        "bgcoloropacity": "#EEEEEE",
-        "textcolor": "#4C4C4C",
+        "bgcoloropacity": "#eeeeee",
+        "textcolor": "#ffffff",
         "overlay_opacity": 0,
         "filter_bar_background": "#000000",
         "filter_bar_text": "#ffffff",
