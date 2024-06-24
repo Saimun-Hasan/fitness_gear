@@ -673,6 +673,7 @@
         "product_list_XypHre",
         "product_list_mxqnVD"
       ],
+      "disabled": true,
       "settings": {
         "section_visibility": "always",
         "desktop_image_style": "scattered",
