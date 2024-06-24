@@ -175,6 +175,7 @@
           "type": "collection",
           "settings": {
             "collection": "resistance-bands",
+            "image": "shopify:\/\/shop_images\/fitness_gear_resistance_bands_2.webp",
             "collection_heading": "",
             "collection_bg_color": ""
           }
@@ -231,7 +232,7 @@
       ],
       "settings": {
         "section_visibility": "always",
-        "heading": "Multi image with text",
+        "heading": "",
         "enable_highlight": false,
         "higlight_style": "basic",
         "outline_thickness": "1px",
@@ -246,6 +247,7 @@
         "enable_animation": false,
         "border_radius_range": 0,
         "image_position": "left",
+        "main_image": "shopify:\/\/shop_images\/fitness_gear_image_1.jpg",
         "full_width_image": false,
         "border_main_image": false,
         "background_effect": false,
