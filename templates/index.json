@@ -304,6 +304,9 @@
       "block_order": [
         "template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-0"
       ],
+      "custom_css": [
+        "@media only screen and (max-width: 767px) {#rich-text__heading-template--18467116384578__a0eb2ce1-84b1-4ac5-87e5-ad3d90a7af82-16799875625d27f180-0 {font-size: 33px; }}"
+      ],
       "settings": {
         "section_visibility": "always",
         "background_image": "shopify:\/\/shop_images\/stroke_banner_13727c29-1415-4a33-b91a-a3db11ec1444.webp",
@@ -315,7 +318,7 @@
         "top_space_desktop": 70,
         "bottom_space_desktop": 70,
         "top_space_mobile": 40,
-        "bottom_space_mobile": 70
+        "bottom_space_mobile": 30
       }
     },
     "aff6f7eb-3bb8-4ba0-ab9a-d8e12207bf74": {
